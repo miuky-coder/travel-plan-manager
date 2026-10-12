@@ -55,62 +55,164 @@
   "flightJourneys": [
     {
       "id": "journey-international-outbound",
-      "title": "出发地 → 首尔仁川（国际段）",
+      "title": "上海浦东 PVG → 首尔仁川 ICN",
       "date": "2026-12-30",
-      "placeholder": true,
-      "status": "pending",
-      "missingFields": [
-        "flightNumber",
-        "departurePlace",
-        "arrivalPlace",
-        "departureTime",
-        "arrivalTime"
-      ],
-      "note": "国际段航班尚未提供，页面不做猜测。"
+      "status": "confirmed",
+      "note": "KE898 08:50 起飞 · 11:55 抵达（示例航班）。中韩时差 1 小时，落地当天下午即可进市区。",
+      "sampleData": true
     },
     {
       "id": "journey-gmp-cju",
       "title": "首尔金浦 GMP → 济州 CJU",
       "date": "2027-01-01",
-      "placeholder": true,
-      "status": "pending",
-      "missingFields": [
-        "flightNumber",
-        "departureTime",
-        "arrivalTime"
-      ],
-      "note": "航程约 1 小时，班次密集；元旦建议提前 1 个月订。"
+      "status": "confirmed",
+      "note": "KE1201 09:00 起飞 · 10:05 抵达（示例航班）。元旦班次紧张，建议起飞前 1 个月出票。",
+      "sampleData": true
     },
     {
       "id": "journey-cju-gmp",
       "title": "济州 CJU → 首尔金浦 GMP（晚班机）",
       "date": "2027-01-02",
-      "placeholder": true,
-      "status": "pending",
-      "missingFields": [
-        "flightNumber",
-        "departureTime",
-        "arrivalTime"
-      ],
-      "note": "建议订 18:30–19:30 起飞的班次，为返程国际航班留出缓冲。"
+      "status": "confirmed",
+      "note": "OZ8996 19:20 起飞 · 20:25 抵达（示例航班）。1 月济州易受大风影响，晚班延误时金浦地铁末班车约 23:30，逾时改打车。",
+      "sampleData": true
     },
     {
       "id": "journey-international-inbound",
-      "title": "首尔仁川 → 出发地（国际段）",
+      "title": "首尔仁川 ICN → 上海浦东 PVG",
       "date": "2027-01-03",
-      "placeholder": true,
-      "status": "pending",
-      "missingFields": [
-        "flightNumber",
-        "departurePlace",
-        "arrivalPlace",
-        "departureTime",
-        "arrivalTime"
-      ],
-      "note": "返程航班尚未提供；当天需预留 3–4 小时办理退税。"
+      "status": "confirmed",
+      "note": "KE897 16:40 起飞 · 17:45 抵达（示例航班）。当天需预留 3–4 小时办退税与海关。",
+      "sampleData": true
     }
   ],
-  "flights": [],
+  "flights": [
+    {
+      "id": "flight-ke898",
+      "journeyId": "journey-international-outbound",
+      "sequence": 1,
+      "airline": {
+        "name": "Korean Air",
+        "nameZh": "大韩航空"
+      },
+      "flightNumber": "KE898",
+      "carrierId": "KE",
+      "cabin": "经济舱",
+      "durationText": "2小时05分",
+      "departure": {
+        "airportCode": "PVG",
+        "airportName": "上海浦东国际机场",
+        "city": "上海",
+        "terminal": "T2",
+        "date": "2026-12-30",
+        "time": "08:50",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "ICN",
+        "airportName": "仁川国际机场",
+        "city": "首尔",
+        "terminal": "T2",
+        "date": "2026-12-30",
+        "time": "11:55",
+        "utcOffset": "+09:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    },
+    {
+      "id": "flight-ke1201",
+      "journeyId": "journey-gmp-cju",
+      "sequence": 1,
+      "airline": {
+        "name": "Korean Air",
+        "nameZh": "大韩航空"
+      },
+      "flightNumber": "KE1201",
+      "carrierId": "KE",
+      "cabin": "经济舱",
+      "durationText": "1小时05分",
+      "departure": {
+        "airportCode": "GMP",
+        "airportName": "金浦国际机场",
+        "city": "首尔",
+        "terminal": "国内线",
+        "date": "2027-01-01",
+        "time": "09:00",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "CJU",
+        "airportName": "济州国际机场",
+        "city": "济州",
+        "date": "2027-01-01",
+        "time": "10:05",
+        "utcOffset": "+09:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    },
+    {
+      "id": "flight-oz8996",
+      "journeyId": "journey-cju-gmp",
+      "sequence": 1,
+      "airline": {
+        "name": "Asiana Airlines",
+        "nameZh": "韩亚航空"
+      },
+      "flightNumber": "OZ8996",
+      "carrierId": "OZ",
+      "cabin": "经济舱",
+      "durationText": "1小时05分",
+      "departure": {
+        "airportCode": "CJU",
+        "airportName": "济州国际机场",
+        "city": "济州",
+        "date": "2027-01-02",
+        "time": "19:20",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "GMP",
+        "airportName": "金浦国际机场",
+        "city": "首尔",
+        "date": "2027-01-02",
+        "time": "20:25",
+        "utcOffset": "+09:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    },
+    {
+      "id": "flight-ke897",
+      "journeyId": "journey-international-inbound",
+      "sequence": 1,
+      "airline": {
+        "name": "Korean Air",
+        "nameZh": "大韩航空"
+      },
+      "flightNumber": "KE897",
+      "carrierId": "KE",
+      "cabin": "经济舱",
+      "durationText": "2小时05分",
+      "departure": {
+        "airportCode": "ICN",
+        "airportName": "仁川国际机场",
+        "city": "首尔",
+        "terminal": "T2",
+        "date": "2027-01-03",
+        "time": "16:40",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "PVG",
+        "airportName": "上海浦东国际机场",
+        "city": "上海",
+        "terminal": "T2",
+        "date": "2027-01-03",
+        "time": "17:45",
+        "utcOffset": "+08:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    }
+  ],
   "accommodations": [
     {
       "id": "stay-seoul-1",
@@ -171,9 +273,9 @@
       "schedule": [
         {
           "id": "d1-1",
-          "time": "14:00",
+          "time": "13:30",
           "type": "flight",
-          "text": "仁川机场落地 → 机场大巴或 AREX 进市区（约 60–70 分钟）",
+          "text": "KE898 11:55 落地仁川 T2 → 入境、取行李、买 T-money → 机场大巴或 AREX 进市区（约 60–70 分钟）",
           "placeIds": [
             "place-incheon"
           ]
@@ -343,22 +445,22 @@
       "schedule": [
         {
           "id": "d3-1",
-          "time": "08:00",
+          "time": "07:30",
           "type": "transfer",
-          "text": "前往金浦机场（明洞打车约 30 分钟，或地铁 + 机场铁路）",
+          "text": "前往金浦机场（明洞打车约 30 分钟，或地铁 + 机场铁路；国内航班提前 1 小时到即可）",
           "placeIds": [
             "place-gimpo"
           ]
         },
         {
           "id": "d3-2",
-          "time": "09:30",
+          "time": "09:00",
           "type": "flight",
-          "text": "金浦 GMP → 济州 CJU（约 1 小时）"
+          "text": "KE1201 金浦 GMP 09:00 → 济州 CJU 10:05（约 1 小时 5 分）"
         },
         {
           "id": "d3-3",
-          "time": "11:30",
+          "time": "11:00",
           "type": "transfer",
           "text": "济州机场取车（需国际驾照 IDP）或直接打车 / 包车；冬季山路建议不自驾",
           "placeIds": [
@@ -475,16 +577,25 @@
           ]
         },
         {
+          "id": "d4-6a",
+          "time": "17:40",
+          "type": "transfer",
+          "text": "还车 / 打车前往济州机场（市区到机场约 20–30 分钟）",
+          "placeIds": [
+            "place-jeju-airport"
+          ]
+        },
+        {
           "id": "d4-6",
-          "time": "18:30",
+          "time": "19:20",
           "type": "flight",
-          "text": "济州 CJU → 金浦 GMP（晚班机）"
+          "text": "OZ8996 济州 CJU 19:20 → 金浦 GMP 20:25（冬季易延误，建议提前 1.5 小时到机场）"
         },
         {
           "id": "d4-7",
-          "time": "21:00",
+          "time": "21:30",
           "type": "check-in",
-          "text": "首尔酒店",
+          "text": "首尔酒店入住（金浦到市区约 30–40 分钟）",
           "placeIds": [
             "place-myeongdong"
           ]
@@ -507,7 +618,7 @@
       "schedule": [
         {
           "id": "d5-1",
-          "time": "10:00",
+          "time": "09:30",
           "type": "shopping",
           "text": "最后补货：明洞 / 弘大 Olive Young，或乐天、新世界、新罗免税店（免税店是“含税价直接免”，和退税是两套体系，别搞混）",
           "placeIds": [
@@ -517,7 +628,7 @@
         },
         {
           "id": "d5-2",
-          "time": "12:00",
+          "time": "11:30",
           "type": "restaurant",
           "text": "午餐：一顿好点的收尾——米其林指南里的韩式餐厅，或酒店附近烤肉",
           "placeIds": [
@@ -526,16 +637,16 @@
         },
         {
           "id": "d5-3",
-          "time": "14:00",
+          "time": "12:45",
           "type": "transfer",
-          "text": "前往仁川机场，留足 3–4 小时（元旦旺季退税柜台排队很长）",
+          "text": "前往仁川机场（留足 3–4 小时：元旦旺季退税柜台排队很长）",
           "placeIds": [
             "place-incheon"
           ]
         },
         {
           "id": "d5-4",
-          "time": "14:40",
+          "time": "13:30",
           "type": "note",
           "text": "退税自助机扫描护照 + 退税单（T1 在 D/J/L 登机口附近，T2 在 D/E 附近）；单张 ₩75,000 以下通常不用验货，高值商品走海关柜台——别托运，放手提",
           "placeIds": [
@@ -544,9 +655,12 @@
         },
         {
           "id": "d5-5",
-          "time": "18:00",
+          "time": "16:40",
           "type": "flight",
-          "text": "返程国际航班（航班号待补充）"
+          "text": "KE897 仁川 ICN 16:40 → 上海浦东 PVG 17:45",
+          "placeIds": [
+            "place-incheon"
+          ]
         }
       ],
       "notes": [
@@ -690,6 +804,14 @@
       "cityOrArea": "济州西归浦",
       "navigation": {
         "query": "카멜리아힐 Camellia Hill Jeju"
+      }
+    },
+    {
+      "id": "place-pvg",
+      "name": "上海浦东国际机场 PVG",
+      "cityOrArea": "上海",
+      "navigation": {
+        "query": "Shanghai Pudong International Airport Terminal 2"
       }
     }
   ],
@@ -842,8 +964,8 @@
     {
       "id": "issue-flights",
       "topic": "航班",
-      "summary": "四段航班（含国际往返、首尔 ⇄ 济州）的具体航班号与时刻尚未提供",
-      "impact": "航班模块当前显示占位卡片，补齐后即可自动显示航段与倒计时"
+      "summary": "四段航班已填入示例（虚构）航班号与时刻，尚未对应真实订座记录",
+      "impact": "航班模块已可正常显示航段与倒计时；拿到真实机票后替换 flights[] 中的航班号、时刻与航站楼即可"
     },
     {
       "id": "issue-hotels",
