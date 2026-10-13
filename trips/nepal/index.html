@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3f6f2">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>我的旅行计划</title>
+  <style>
+    :root {
+      --paper: #f3f6f2;
+      --surface: #ffffff;
+      --ink: #13262f;
+      --muted: #66757a;
+      --line: #d7dfdc;
+      --lake: #287b90;
+      --lake-soft: #d9ebee;
+      --forest: #516b55;
+      --terracotta: #b65c3a;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --shadow: 0 16px 48px rgba(25, 47, 55, 0.08);
+      --content: 720px;
+      --safe-top: env(safe-area-inset-top, 0px);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(40, 123, 144, 0.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 100% 32px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      min-height: 100vh;
+    }
+    .wrap { max-width: var(--content); margin: 0 auto; padding: 0 14px 64px; }
+
+    header.hero {
+      padding: calc(56px + var(--safe-top)) 0 34px;
+    }
+    .hero__eyebrow {
+      font-size: 12px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--lake);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 7vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -.01em;
+    }
+    .hero p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+
+    .trip-list { display: grid; gap: 18px; margin-top: 8px; }
+
+    a.trip-card {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: 22px 22px 20px;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    a.trip-card:hover, a.trip-card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 56px rgba(25, 47, 55, 0.13);
+      outline: none;
+    }
+    a.trip-card::before {
+      content: "";
+      position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+      background: var(--accent, var(--lake));
+    }
+    .trip-card__status {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft, var(--lake-soft));
+      color: var(--accent-ink, var(--lake));
+      margin-bottom: 12px;
+    }
+    .trip-card h2 {
+      margin: 0 0 8px;
+      font-size: 21px;
+      line-height: 1.35;
+    }
+    .trip-card__date {
+      font-size: 13px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 14px;
+    }
+    .trip-card__desc {
+      margin: 0 0 16px;
+      font-size: 14px;
+      line-height: 1.75;
+      color: #3c4d54;
+    }
+    .trip-card__tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 16px;
+    }
+    .tag {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eef2f0;
+      color: #4c5c62;
+    }
+    .trip-card__cta {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 14px; font-weight: 700; color: var(--accent, var(--lake));
+    }
+    .trip-card__cta::after { content: "→"; transition: transform .18s ease; }
+    a.trip-card:hover .trip-card__cta::after { transform: translateX(4px); }
+
+    .trip-card--nepal { --accent: #b65c3a; --accent-soft: #f6e4dc; --accent-ink: #96462a; }
+    .trip-card--korea { --accent: #287b90; --accent-soft: #d9ebee; --accent-ink: #1e5f70; }
+
+    footer.site-foot {
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    footer.site-foot code {
+      background: #eef2f0;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero__eyebrow">My Travel Plans</div>
+      <h1>我的旅行计划</h1>
+      <p>每个行程都是一份独立的网页面板 —— 航班、路线地图、每日行程、准备清单和记账都在里面。</p>
+    </header>
+
+    <main>
+      <div class="trip-list">
+
+        <a class="trip-card trip-card--nepal" href="trips/nepal/">
+          <span class="trip-card__status">元旦 · 待预订</span>
+          <h2>尼泊尔 4 日 · 加德满都谷地</h2>
+          <div class="trip-card__date">2027/01/01 — 01/04 · 4 天 3 晚 · 2 人</div>
+          <p class="trip-card__desc">
+            元旦请假 1 天，专程去看<strong>日照金山</strong>。住纳加阔特山顶等日出，把加德满都谷地 7 处世界遗产里的 5 处走完。冬季是尼泊尔全年能见度最高的季节。
+          </p>
+          <div class="trip-card__tags">
+            <span class="tag">日照金山</span>
+            <span class="tag">纳加阔特</span>
+            <span class="tag">世界遗产</span>
+            <span class="tag">品质型</span>
+          </div>
+          <div class="trip-card__cta">打开行程</div>
+        </a>
+
+        <a class="trip-card trip-card--korea" href="trips/korea/">
+          <span class="trip-card__status">元旦 · 待预订</span>
+          <h2>韩国 5 日 · 首尔 + 济州</h2>
+          <div class="trip-card__date">2026/12/30 — 2027/01/03 · 5 天 4 晚</div>
+          <p class="trip-card__desc">
+            跨年夜在首尔，济州放中段看城山日出峰与万丈窟。正撞上 2027 Korea Grand Sale 和韩国冬季庆典档期。
+          </p>
+          <div class="trip-card__tags">
+            <span class="tag">跨年</span>
+            <span class="tag">首尔</span>
+            <span class="tag">济州</span>
+            <span class="tag">购物美妆</span>
+          </div>
+          <div class="trip-card__cta">打开行程</div>
+        </a>
+
+      </div>
+    </main>
+
+    <footer class="site-foot">
+      <p>两个行程都用同一套模板（<code>Travel-Plan-Page</code>），数据存在各自的 <code>trip-data.json</code> 里，可以独立修改互不影响。</p>
+    </footer>
+  </div>
+</body>
+</html>

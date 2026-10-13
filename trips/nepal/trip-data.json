@@ -1,0 +1,1696 @@
+{
+  "$schema": "./schemas/trip-data.schema.json",
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "todo": true,
+      "driving": false,
+      "ledger": true
+    },
+    "language": "zh-CN",
+    "persistence": {
+      "mode": "local"
+    }
+  },
+  "metadata": {
+    "tripId": "np-kathmandu-valley-20270101",
+    "title": "尼泊尔 4 日 · 加德满都谷地（元旦日照金山）",
+    "language": "zh-CN",
+    "timeZone": "Asia/Kathmandu",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/templates/template-07-compact-basin.webp",
+        "assets/maps/templates/template-06-upland-basin.webp"
+      ]
+    }
+  },
+  "trip": {
+    "status": "draft",
+    "startDate": "2027-01-01",
+    "endDate": "2027-01-04",
+    "dayCount": 4,
+    "nightCountAway": 3,
+    "countries": [
+      {
+        "code": "NP",
+        "nameZh": "尼泊尔",
+        "name": "Nepal",
+        "nameEn": "Nepal"
+      }
+    ],
+    "primaryDestinationCountries": [
+      "NP"
+    ],
+    "primaryDestinationName": "加德满都谷地",
+    "citiesAndAreas": [
+      "加德满都",
+      "纳加阔特",
+      "巴德岗",
+      "帕坦"
+    ],
+    "routeSummary": "广州 ⇄ 加德满都 → 帕斯帕提那 · 博达哈 · 猴庙 → 纳加阔特（日照金山）→ 巴德岗古城 → 加德满都杜巴 · 帕坦 → 返程",
+    "groupSize": 2
+  },
+  "flightJourneys": [
+    {
+      "id": "journey-outbound",
+      "title": "广州白云 CAN → 加德满都 KTM",
+      "date": "2027-01-01",
+      "status": "confirmed",
+      "note": "CZ6067 08:40 起飞 · 11:30 抵达（示例航班，飞行约 5 小时 5 分）。落地签对中国公民免费。"
+    },
+    {
+      "id": "journey-inbound",
+      "title": "加德满都 KTM → 广州白云 CAN",
+      "date": "2027-01-03",
+      "status": "confirmed",
+      "note": "CZ3067 22:30 起飞 · 次日 05:30 抵达（示例航班，飞行约 4 小时 45 分）。选夜航可避开加德满都冬季早雾。"
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-cz6067",
+      "journeyId": "journey-outbound",
+      "sequence": 1,
+      "airline": {
+        "name": "China Southern Airlines",
+        "nameZh": "中国南方航空"
+      },
+      "flightNumber": "CZ6067",
+      "carrierId": "CZ",
+      "cabin": "经济舱",
+      "durationText": "5小时05分",
+      "departure": {
+        "airportCode": "CAN",
+        "airportName": "广州白云国际机场",
+        "city": "广州",
+        "terminal": "T2",
+        "date": "2027-01-01",
+        "time": "08:40",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "KTM",
+        "airportName": "特里布万国际机场",
+        "city": "加德满都",
+        "terminal": "国际",
+        "date": "2027-01-01",
+        "time": "11:30",
+        "utcOffset": "+05:45"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    },
+    {
+      "id": "flight-cz3067",
+      "journeyId": "journey-inbound",
+      "sequence": 1,
+      "airline": {
+        "name": "China Southern Airlines",
+        "nameZh": "中国南方航空"
+      },
+      "flightNumber": "CZ3067",
+      "carrierId": "CZ",
+      "cabin": "经济舱",
+      "durationText": "4小时45分",
+      "departure": {
+        "airportCode": "KTM",
+        "airportName": "特里布万国际机场",
+        "city": "加德满都",
+        "terminal": "国际",
+        "date": "2027-01-03",
+        "time": "22:30",
+        "utcOffset": "+05:45"
+      },
+      "arrival": {
+        "airportCode": "CAN",
+        "airportName": "广州白云国际机场",
+        "city": "广州",
+        "terminal": "T2",
+        "date": "2027-01-04",
+        "time": "05:30",
+        "utcOffset": "+08:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "stay-nagarkot",
+      "name": "纳加阔特山顶酒店（待确认）",
+      "area": "纳加阔特 Nagarkot",
+      "nights": [
+        1
+      ],
+      "checkIn": "2027-01-01",
+      "checkOut": "2027-01-02",
+      "bookingStatus": "pending",
+      "note": "推荐 Club Himalaya 或 Hotel Mystic Mountain，约 $150–280/晚。订房务必备注 north-facing mountain view room —— 朝向决定能否在房间看日照金山。"
+    },
+    {
+      "id": "stay-kathmandu",
+      "name": "加德满都酒店（待确认）",
+      "area": "加德满都 Kathmandu",
+      "nights": [
+        2,
+        3
+      ],
+      "checkIn": "2027-01-02",
+      "checkOut": "2027-01-03",
+      "bookingStatus": "pending",
+      "note": "推荐 Dwarika's Hotel（$192–400）或 Hotel Yak & Yeti（$180–300）；凯悦（$200–320）、Marriott（$132 起）可降预算。"
+    }
+  ],
+  "groundTransport": [
+    {
+      "id": "transport-package",
+      "type": "包车 + 导游",
+      "provider": "当地地接社（待确认）",
+      "period": "2027-01-01 至 2027-01-03",
+      "note": "品质型建议全程包车 + 中文或英文导游，4 天约 $250–400（2 人分摊）。含机场接送、纳加阔特往返、巴德岗与帕坦各城际移动。"
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "id": "day-1",
+      "date": "2027-01-01",
+      "title": "落地 · 谷地东部三遗产 · 上纳加阔特",
+      "locations": [
+        "特里布万机场",
+        "帕斯帕提那",
+        "博达哈大佛塔",
+        "斯瓦扬布纳特",
+        "纳加阔特"
+      ],
+      "schedule": [
+        {
+          "id": "d1-1",
+          "time": "08:40",
+          "type": "flight",
+          "text": "CZ6067 广州白云 T2 08:40 起飞 → 加德满都 11:30 抵达（示例航班）",
+          "placeIds": [
+            "place-cantairport"
+          ]
+        },
+        {
+          "id": "d1-2",
+          "time": "11:30",
+          "type": "transfer",
+          "text": "落地签：中国公民旅游签免费，停留 15 天档足够。入境后取行李、办电话卡、机场只换 $20–40 应急现金",
+          "placeIds": [
+            "place-ktmairport"
+          ]
+        },
+        {
+          "id": "d1-3",
+          "time": "13:00",
+          "type": "restaurant",
+          "text": "午餐：尼泊尔第一顿 Dal Bhat（扁豆汤配饭，无限续饭）或 Thakali 套餐",
+          "placeIds": [
+            "place-thamel"
+          ]
+        },
+        {
+          "id": "d1-4",
+          "time": "14:30",
+          "type": "attraction",
+          "text": "帕斯帕提那神庙（UNESCO，NPR 1,000）：印度教最神圣的湿婆庙，巴格马蒂河畔火葬台与苦行僧。非印度教徒不得进入主殿，火葬台严禁拍照",
+          "placeIds": [
+            "place-pashupatinath"
+          ]
+        },
+        {
+          "id": "d1-5",
+          "time": "16:30",
+          "type": "attraction",
+          "text": "博达哈大佛塔（UNESCO，NPR 400）：世界最大藏传佛教圆顶佛塔之一，傍晚藏民转经、点酥油灯，氛围最好",
+          "placeIds": [
+            "place-boudhanath"
+          ]
+        },
+        {
+          "id": "d1-6",
+          "time": "17:45",
+          "type": "attraction",
+          "text": "斯瓦扬布纳特寺 / 猴庙（UNESCO，NPR 200）：山顶俯瞰整个加德满都谷地，拍日落全景。眼镜和食物收好，猴子会抢",
+          "placeIds": [
+            "place-swayambhunath"
+          ]
+        },
+        {
+          "id": "d1-7",
+          "time": "19:00",
+          "type": "transfer",
+          "text": "上纳加阔特（约 1–1.5 小时车程），与机场同在东侧，顺路"
+        },
+        {
+          "id": "d1-8",
+          "time": "20:30",
+          "type": "check-in",
+          "text": "纳加阔特山顶酒店入住 + 晚餐。设好 05:15 的闹钟",
+          "placeIds": [
+            "place-nagarkot"
+          ]
+        }
+      ],
+      "notes": [
+        "帕斯帕提那附近不适合住宿 —— 火葬台白天持续运作，所谓景观房能直接看到火葬场。本行程只做清晨参观，住宿全部在市区别处。",
+        "落地当天安排零压力：行李放车上、景点全在东侧，最后顺势上山，不走回头路。"
+      ],
+      "costReferences": [
+        {
+          "item": "落地签",
+          "currency": "CNY",
+          "amountOptions": [
+            "0（中国公民免费）"
+          ]
+        },
+        {
+          "item": "门票（帕斯帕提那 + 博达哈 + 猴庙）",
+          "currency": "NPR",
+          "amountOptions": [
+            "1,600"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "id": "day-2",
+      "date": "2027-01-02",
+      "title": "⭐ 纳加阔特日照金山 · 巴德岗古城",
+      "locations": [
+        "纳加阔特观景台",
+        "巴德岗杜巴广场",
+        "陶器广场",
+        "陶马迪广场",
+        "达塔特雷亚广场",
+        "昌古纳拉扬寺"
+      ],
+      "schedule": [
+        {
+          "id": "d2-1",
+          "time": "05:15",
+          "type": "note",
+          "text": "起床，热茶 + 厚羽绒（山顶清晨接近 0℃，风大）",
+          "placeIds": [
+            "place-nagarkot"
+          ]
+        },
+        {
+          "id": "d2-2",
+          "time": "05:30",
+          "type": "attraction",
+          "text": "⭐ 日照金山：最强烈的金色出现在日出前 15–20 分钟，雪峰由深红转橙再转纯金，全过程 45 分钟。晴朗时可扫到 8 条喜马拉雅山脉，东侧能远眺珠峰方向。带三脚架拍延时",
+          "placeIds": [
+            "place-nagarkot"
+          ]
+        },
+        {
+          "id": "d2-3",
+          "time": "07:00",
+          "type": "restaurant",
+          "text": "露天早餐，多数山顶酒店有山景露台",
+          "placeIds": [
+            "place-nagarkot"
+          ]
+        },
+        {
+          "id": "d2-4",
+          "time": "09:30",
+          "type": "transfer",
+          "text": "下山，前往巴德岗（约 1.5 小时）"
+        },
+        {
+          "id": "d2-5",
+          "time": "10:30",
+          "type": "attraction",
+          "text": "巴德岗杜巴广场（UNESCO，NPR 1,800–2,000）：55 窗宫、金门。凭护照可免费延长门票至 7 日",
+          "placeIds": [
+            "place-bhaktapur"
+          ]
+        },
+        {
+          "id": "d2-6",
+          "time": "12:00",
+          "type": "restaurant",
+          "text": "陶器广场看轮盘制陶 + 午餐。务必吃 juju dhau（国王酸奶）—— 陶碗装的厚酸奶，巴德岗特产",
+          "placeIds": [
+            "place-pottery"
+          ]
+        },
+        {
+          "id": "d2-7",
+          "time": "13:30",
+          "type": "attraction",
+          "text": "陶马迪广场：尼亚塔波拉神庙，尼泊尔最高的五层塔式神庙",
+          "placeIds": [
+            "place-taumadhi"
+          ]
+        },
+        {
+          "id": "d2-8",
+          "time": "15:00",
+          "type": "attraction",
+          "text": "达塔特雷亚广场 → 昌古纳拉扬寺（UNESCO，NPR 300）：谷地最古老寺庙，4 世纪石雕",
+          "placeIds": [
+            "place-changu"
+          ]
+        },
+        {
+          "id": "d2-9",
+          "time": "17:30",
+          "type": "transfer",
+          "text": "返回加德满都（约 1 小时）"
+        },
+        {
+          "id": "d2-10",
+          "time": "19:00",
+          "type": "restaurant",
+          "text": "晚餐：Krishnarpan @ Dwarika's —— 尼泊尔皇家料理，6/9/12/18/22 道套餐，需提前 24 小时订位，约 $80–120/人",
+          "placeIds": [
+            "place-dwarikas"
+          ]
+        }
+      ],
+      "notes": [
+        "日照金山是这趟旅行的核心，前一晚务必确认次日天气与日出时间（1 月初纳加阔特日出约 06:45–07:00）。",
+        "巴德岗是谷地保存最完整的中世纪城邦，别只逛杜巴广场 —— 陶器广场、陶马迪、达塔特雷亚三处连起来才是完整的巴德岗。"
+      ],
+      "costReferences": [
+        {
+          "item": "巴德岗 + 昌古纳拉扬门票",
+          "currency": "NPR",
+          "amountOptions": [
+            "2,100–2,300"
+          ]
+        },
+        {
+          "item": "Krishnarpan 皇家料理",
+          "currency": "USD",
+          "amountOptions": [
+            "80–120"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "id": "day-3",
+      "date": "2027-01-03",
+      "title": "双杜巴广场 · 泰米尔扫货 · 深夜回国",
+      "locations": [
+        "加德满都杜巴广场",
+        "阿山广场",
+        "帕坦杜巴广场",
+        "泰米尔",
+        "特里布万机场"
+      ],
+      "schedule": [
+        {
+          "id": "d3-1",
+          "time": "09:00",
+          "type": "attraction",
+          "text": "加德满都杜巴广场（UNESCO，NPR 1,000）：哈努曼多卡宫、库玛丽宫（活女神居所）、独木庙。库玛丽露面通常在上午晚些或下午",
+          "placeIds": [
+            "place-ktmdurbar"
+          ]
+        },
+        {
+          "id": "d3-2",
+          "time": "11:30",
+          "type": "attraction",
+          "text": "老城步行：阿山广场（Asan）→ 因陀罗广场（Indra Chowk）—— 香料、纺织品、金饰的传统市场，加德满都最生动的日常",
+          "placeIds": [
+            "place-asan"
+          ]
+        },
+        {
+          "id": "d3-3",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "午餐：老城区尼瓦尔菜馆，或 Thamel 的 Chimney / Le Sherpa（约 $30–60/人）",
+          "placeIds": [
+            "place-thamel"
+          ]
+        },
+        {
+          "id": "d3-4",
+          "time": "14:00",
+          "type": "attraction",
+          "text": "帕坦杜巴广场（UNESCO，NPR 1,000，含帕坦博物馆门票 —— 南亚性价比最高的博物馆）：克里希纳神庙、金庙。留 1–2 小时给博物馆",
+          "placeIds": [
+            "place-patan"
+          ]
+        },
+        {
+          "id": "d3-5",
+          "time": "16:00",
+          "type": "shopping",
+          "text": "帕坦古城巷子 + 手工艺作坊，Jhamsikhel 一带",
+          "placeIds": [
+            "place-patan"
+          ]
+        },
+        {
+          "id": "d3-6",
+          "time": "17:30",
+          "type": "transfer",
+          "text": "回酒店休整、退房、寄存行李"
+        },
+        {
+          "id": "d3-7",
+          "time": "18:30",
+          "type": "shopping",
+          "text": "泰米尔区扫货：羊毛围巾、唐卡、金刚菩提。砍价从报价 1/10 起谈",
+          "placeIds": [
+            "place-thamel"
+          ]
+        },
+        {
+          "id": "d3-8",
+          "time": "19:30",
+          "type": "restaurant",
+          "text": "晚餐 + 收拾行李",
+          "placeIds": [
+            "place-thamel"
+          ]
+        },
+        {
+          "id": "d3-9",
+          "time": "20:30",
+          "type": "transfer",
+          "text": "前往机场（约 20–30 分钟），提早 2 小时以上值机 —— 尼泊尔机场效率不高，旺季队伍很长",
+          "placeIds": [
+            "place-ktmairport"
+          ]
+        },
+        {
+          "id": "d3-10",
+          "time": "22:30",
+          "type": "flight",
+          "text": "CZ3067 加德满都 22:30 起飞 → 次日 05:30 抵达广州（示例航班）",
+          "placeIds": [
+            "place-ktmairport"
+          ]
+        }
+      ],
+      "notes": [
+        "回程选 22:30 夜航是刻意的 —— 加德满都冬季清晨浓雾会让早班航班全部趴窝，夜航正好避开。",
+        "1/3 当天不要安排任何不可推迟的事项。博物馆安排在室内段，退税与值机留足时间。"
+      ],
+      "costReferences": [
+        {
+          "item": "加德满都 + 帕坦门票",
+          "currency": "NPR",
+          "amountOptions": [
+            "2,000"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "id": "day-4",
+      "date": "2027-01-04",
+      "title": "凌晨抵达广州",
+      "locations": [
+        "广州"
+      ],
+      "schedule": [
+        {
+          "id": "d4-1",
+          "time": "05:30",
+          "type": "flight",
+          "text": "CZ3067 抵达广州白云（示例航班）",
+          "placeIds": [
+            "place-cantairport"
+          ]
+        },
+        {
+          "id": "d4-2",
+          "time": "06:30",
+          "type": "note",
+          "text": "入境、取行李。落地已近清晨，建议直接回家补觉，当天不要安排重要工作"
+        }
+      ],
+      "notes": [
+        "如果 1/4 必须准点上班，往返都选夜航才能不占假期：去程 20:05 起飞 22:30 到（需用掉 12/31 的假），回程 22:30 起飞次日凌晨到。"
+      ],
+      "costReferences": []
+    }
+  ],
+  "places": [
+    {
+      "id": "place-cantairport",
+      "name": "广州白云国际机场 CAN",
+      "cityOrArea": "广州",
+      "navigation": {
+        "query": "Guangzhou Baiyun International Airport Terminal 2"
+      }
+    },
+    {
+      "id": "place-ktmairport",
+      "name": "特里布万国际机场 KTM",
+      "cityOrArea": "加德满都",
+      "navigation": {
+        "query": "Tribhuvan International Airport"
+      }
+    },
+    {
+      "id": "place-thamel",
+      "name": "泰米尔区 Thamel",
+      "cityOrArea": "加德满都",
+      "navigation": {
+        "query": "Thamel Kathmandu"
+      }
+    },
+    {
+      "id": "place-pashupatinath",
+      "name": "帕斯帕提那神庙",
+      "cityOrArea": "加德满都",
+      "navigation": {
+        "query": "Pashupatinath Temple Kathmandu"
+      }
+    },
+    {
+      "id": "place-boudhanath",
+      "name": "博达哈大佛塔",
+      "cityOrArea": "加德满都",
+      "navigation": {
+        "query": "Boudhanath Stupa Kathmandu"
+      }
+    },
+    {
+      "id": "place-swayambhunath",
+      "name": "斯瓦扬布纳特寺（猴庙）",
+      "cityOrArea": "加德满都",
+      "navigation": {
+        "query": "Swayambhunath Temple Kathmandu"
+      }
+    },
+    {
+      "id": "place-nagarkot",
+      "name": "纳加阔特观景台",
+      "cityOrArea": "纳加阔特",
+      "navigation": {
+        "query": "Nagarkot View Tower Nepal"
+      }
+    },
+    {
+      "id": "place-bhaktapur",
+      "name": "巴德岗杜巴广场",
+      "cityOrArea": "巴德岗",
+      "navigation": {
+        "query": "Bhaktapur Durbar Square"
+      }
+    },
+    {
+      "id": "place-pottery",
+      "name": "陶器广场",
+      "cityOrArea": "巴德岗",
+      "navigation": {
+        "query": "Pottery Square Bhaktapur"
+      }
+    },
+    {
+      "id": "place-taumadhi",
+      "name": "陶马迪广场（尼亚塔波拉神庙）",
+      "cityOrArea": "巴德岗",
+      "navigation": {
+        "query": "Taumadhi Square Bhaktapur Nyatapola"
+      }
+    },
+    {
+      "id": "place-changu",
+      "name": "昌古纳拉扬寺",
+      "cityOrArea": "巴德岗",
+      "navigation": {
+        "query": "Changu Narayan Temple"
+      }
+    },
+    {
+      "id": "place-ktmdurbar",
+      "name": "加德满都杜巴广场",
+      "cityOrArea": "加德满都",
+      "navigation": {
+        "query": "Kathmandu Durbar Square"
+      }
+    },
+    {
+      "id": "place-asan",
+      "name": "阿山广场 Asan",
+      "cityOrArea": "加德满都",
+      "navigation": {
+        "query": "Asan Tole Kathmandu"
+      }
+    },
+    {
+      "id": "place-patan",
+      "name": "帕坦杜巴广场",
+      "cityOrArea": "帕坦",
+      "navigation": {
+        "query": "Patan Durbar Square Lalitpur"
+      }
+    },
+    {
+      "id": "place-dwarikas",
+      "name": "Dwarika's Hotel / Krishnarpan",
+      "cityOrArea": "加德满都",
+      "navigation": {
+        "query": "Dwarika's Hotel Kathmandu"
+      }
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "rest-krishnarpan",
+      "name": "Krishnarpan @ Dwarika's",
+      "cityOrArea": "加德满都",
+      "note": "尼泊尔皇家料理，6/9/12/18/22 道套餐，需提前 24 小时订位，约 $80–120/人",
+      "placeIds": [
+        "place-dwarikas"
+      ]
+    },
+    {
+      "id": "rest-thamel-chimney",
+      "name": "Chimney / Le Sherpa",
+      "cityOrArea": "加德满都",
+      "note": "品质型西餐与尼泊尔菜，约 $30–60/人",
+      "placeIds": [
+        "place-thamel"
+      ]
+    },
+    {
+      "id": "rest-bhaktapur-jujudhau",
+      "name": "巴德岗 juju dhau（国王酸奶）",
+      "cityOrArea": "巴德岗",
+      "note": "陶碗装的厚酸奶，巴德岗必吃特产",
+      "placeIds": [
+        "place-pottery"
+      ]
+    }
+  ],
+  "bookingsAndTickets": [
+    {
+      "id": "ticket-dwarikas-krishnarpan",
+      "title": "Krishnarpan 皇家料理订位",
+      "category": "餐厅",
+      "status": "pending",
+      "note": "Dwarika's Hotel 内。6/9/12/18/22 道套餐，需提前至少 24 小时预约，建议订酒店时一并订。约 $80–120/人。"
+    },
+    {
+      "id": "ticket-nagarkot-hotel",
+      "title": "纳加阔特山顶酒店",
+      "category": "住宿",
+      "status": "pending",
+      "note": "推荐 Club Himalaya / Hotel Mystic Mountain，$150–280/晚。务必备注 north-facing mountain view room。山顶房间少，尽早订。"
+    },
+    {
+      "id": "ticket-ktm-hotel",
+      "title": "加德满都酒店（2 晚）",
+      "category": "住宿",
+      "status": "pending",
+      "note": "Dwarika's（$192–400）或 Hotel Yak & Yeti（$180–300）；凯悦 $200–320、Marriott $132 起。"
+    },
+    {
+      "id": "ticket-package-car",
+      "title": "包车 + 导游（4 天）",
+      "category": "交通",
+      "status": "pending",
+      "note": "含机场接送、纳加阔特往返、巴德岗与帕坦城际移动。4 天约 $250–400（2 人分摊）。元旦档期紧，需提前订。"
+    },
+    {
+      "id": "ticket-heritage-pass",
+      "title": "谷地遗产门票（现场购票）",
+      "category": "门票",
+      "status": "pending",
+      "note": "帕斯帕提那 NPR 1,000 · 博达哈 NPR 400 · 猴庙 NPR 200 · 巴德岗 NPR 1,800–2,000 · 昌古纳拉扬 NPR 300 · 加德满都杜巴 NPR 1,000 · 帕坦杜巴 NPR 1,000。巴德岗门票凭护照可免费延长至 7 日。"
+    }
+  ],
+  "ticketPlanning": {
+    "note": "谷地遗产门票均为现场购票，无需提前预订；住宿、餐厅与包车需提前订。",
+    "items": [
+      {
+        "label": "已订",
+        "count": 0
+      },
+      {
+        "label": "待订",
+        "count": 5
+      }
+    ]
+  },
+  "preTrip": {
+    "packingItems": [
+      {
+        "id": "pre-1",
+        "text": "订往返机票：广州 = 加德满都（CZ6067 去 / CZ3067 回，示例航班需替换为实际航班号与时刻）—— 元旦是全年最贵档，越晚越贵",
+        "completed": false
+      },
+      {
+        "id": "pre-2",
+        "text": "订纳加阔特山顶酒店，备注 north-facing mountain view room（山顶房间少，优先订）",
+        "completed": false
+      },
+      {
+        "id": "pre-3",
+        "text": "订加德满都酒店 2 晚（Dwarika's / Yak & Yeti / 凯悦 / Marriott）",
+        "completed": false
+      },
+      {
+        "id": "pre-4",
+        "text": "确认护照有效期 ≥ 6 个月，且有空白页",
+        "completed": false
+      },
+      {
+        "id": "pre-5",
+        "text": "办签证：中国公民旅游签免费，可网上申请（nepaliport.immigration.gov.np）或落地签，选 15 天档",
+        "completed": false
+      },
+      {
+        "id": "pre-6",
+        "text": "找地接社订包车 + 导游（4 天），元旦档期紧",
+        "completed": false
+      },
+      {
+        "id": "pre-7",
+        "text": "预约 Krishnarpan 皇家料理（提前 24 小时，建议与酒店一起订）",
+        "completed": false
+      },
+      {
+        "id": "pre-8",
+        "text": "买旅行保险，选含直升机救援的",
+        "completed": false
+      },
+      {
+        "id": "pre-9",
+        "text": "换汇：机场只换 $20–40 应急，主力在泰米尔换汇点换；准备现金（门票/包车/小店只收现金），另带 Visa/Master 备用",
+        "completed": false
+      },
+      {
+        "id": "pre-10",
+        "text": "行李：厚羽绒、抓绒、保暖内衣、手套帽子围巾、口罩（加德满都冬季空气差）、防晒、三脚架、印度标转换插头、常用药",
+        "completed": false
+      },
+      {
+        "id": "pre-11",
+        "text": "出发前核对：纳加阔特 1 月日出时间与天气、各遗产门票最新价、Krishnarpan 是否需最低人数",
+        "completed": false
+      }
+    ]
+  },
+  "mapLinks": {
+    "note": "地点导航链接由页面按 places 自动生成，此处留空。",
+    "links": []
+  },
+  "issuesAndUncertainties": [
+    {
+      "id": "issue-flights",
+      "topic": "航班",
+      "summary": "两段航班已填入示例（虚构）航班号与时刻，尚未对应真实订座记录",
+      "impact": "航班模块已可正常显示航段与倒计时；拿到真实机票后替换 flights[] 中的航班号、时刻与航站楼即可"
+    },
+    {
+      "id": "issue-hotels",
+      "topic": "住宿",
+      "summary": "纳加阔特与加德满都的具体酒店尚未预订",
+      "impact": "住宿记录均为待确认；纳加阔特山景房型有限，建议优先预订"
+    },
+    {
+      "id": "issue-morning-fog",
+      "topic": "天气",
+      "summary": "1 月加德满都谷地清晨浓雾会让早班航班滞留至上午中段",
+      "impact": "回程已刻意排成 22:30 夜航避开早雾；1/3 当天不安排不可推迟的事项"
+    },
+    {
+      "id": "issue-visa",
+      "topic": "签证",
+      "summary": "中国公民赴尼泊尔旅游签免费，可网上申请或落地签，停留 15/30/90 天可选",
+      "impact": "无签证成本；只需确保护照有效期 ≥ 6 个月。同一自然年内累计停留不超过 150 天"
+    },
+    {
+      "id": "issue-air",
+      "topic": "空气",
+      "summary": "11 月中至次年 3 月是加德满都全年空气最差的时段",
+      "impact": "建议戴口罩；纳加阔特海拔较高、视野远离谷地污染，看雪山受影响较小"
+    },
+    {
+      "id": "issue-cut",
+      "topic": "行程取舍",
+      "summary": "4 天时间仅够加德满都谷地，博卡拉（萨朗科看鱼尾峰日照金山）、奇旺、蓝毗尼均未纳入",
+      "impact": "如需第二个日照金山机位，建议连请 12/31 + 1/4 拉长到 6 天，加博卡拉双飞"
+    }
+  ],
+  "map": {
+    "schemaVersion": "1.0-lite",
+    "mapMode": "template-auto",
+    "templateId": "auto",
+    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "defaultRegionId": "kathmandu",
+    "regions": [
+      {
+        "id": "kathmandu",
+        "label": "加德满都谷地",
+        "countryCode": "NP"
+      },
+      {
+        "id": "nagarkot",
+        "label": "纳加阔特",
+        "countryCode": "NP"
+      }
+    ],
+    "places": [
+      {
+        "id": "place-ktmairport",
+        "name": "特里布万机场",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "includeInMap": false,
+        "geo": {
+          "lat": 27.6966,
+          "lng": 85.3612
+        }
+      },
+      {
+        "id": "place-pashupatinath",
+        "name": "帕斯帕提那神庙",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "geo": {
+          "lat": 27.7104,
+          "lng": 85.3487
+        }
+      },
+      {
+        "id": "place-boudhanath",
+        "name": "博达哈大佛塔",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "geo": {
+          "lat": 27.7215,
+          "lng": 85.362
+        }
+      },
+      {
+        "id": "place-thamel",
+        "name": "泰米尔区",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "geo": {
+          "lat": 27.7154,
+          "lng": 85.3123
+        }
+      },
+      {
+        "id": "place-ktmdurbar",
+        "name": "加德满都杜巴广场",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "geo": {
+          "lat": 27.7045,
+          "lng": 85.3066
+        }
+      },
+      {
+        "id": "place-swayambhunath",
+        "name": "猴庙",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "geo": {
+          "lat": 27.7149,
+          "lng": 85.2909
+        }
+      },
+      {
+        "id": "place-asan",
+        "name": "阿山广场",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "geo": {
+          "lat": 27.7076,
+          "lng": 85.3121
+        }
+      },
+      {
+        "id": "place-dwarikas",
+        "name": "Dwarika's Hotel",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "geo": {
+          "lat": 27.7056,
+          "lng": 85.3361
+        }
+      },
+      {
+        "id": "place-patan",
+        "name": "帕坦杜巴广场",
+        "countryCode": "NP",
+        "mapRegionId": "kathmandu",
+        "geo": {
+          "lat": 27.6727,
+          "lng": 85.3255
+        }
+      },
+      {
+        "id": "place-nagarkot",
+        "name": "纳加阔特观景台",
+        "countryCode": "NP",
+        "mapRegionId": "nagarkot",
+        "geo": {
+          "lat": 27.7154,
+          "lng": 85.5206
+        }
+      },
+      {
+        "id": "place-bhaktapur",
+        "name": "巴德岗杜巴广场",
+        "countryCode": "NP",
+        "mapRegionId": "nagarkot",
+        "geo": {
+          "lat": 27.6722,
+          "lng": 85.4278
+        }
+      },
+      {
+        "id": "place-taumadhi",
+        "name": "陶马迪广场",
+        "countryCode": "NP",
+        "mapRegionId": "nagarkot",
+        "geo": {
+          "lat": 27.6718,
+          "lng": 85.4297
+        }
+      },
+      {
+        "id": "place-pottery",
+        "name": "陶器广场",
+        "countryCode": "NP",
+        "mapRegionId": "nagarkot",
+        "geo": {
+          "lat": 27.6706,
+          "lng": 85.4318
+        }
+      },
+      {
+        "id": "place-changu",
+        "name": "昌古纳拉扬寺",
+        "countryCode": "NP",
+        "mapRegionId": "nagarkot",
+        "geo": {
+          "lat": 27.7164,
+          "lng": 85.4279
+        }
+      }
+    ],
+    "routes": [
+      {
+        "day": 1,
+        "placeIds": [
+          "place-ktmairport",
+          "place-pashupatinath",
+          "place-boudhanath",
+          "place-swayambhunath",
+          "place-nagarkot"
+        ]
+      },
+      {
+        "day": 2,
+        "placeIds": [
+          "place-nagarkot",
+          "place-bhaktapur",
+          "place-taumadhi",
+          "place-pottery",
+          "place-changu",
+          "place-thamel"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "place-ktmdurbar",
+          "place-asan",
+          "place-thamel",
+          "place-patan",
+          "place-dwarikas",
+          "place-ktmairport"
+        ]
+      }
+    ]
+  },
+  "routeMap": {
+    "defaultRegionId": "kathmandu",
+    "regions": [
+      {
+        "id": "kathmandu",
+        "label": "加德满都谷地",
+        "countryCode": "NP",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "compact-basin",
+        "mapModeReason": "dense-place-cluster",
+        "mapModeMetrics": {
+          "placeCount": 8,
+          "geoPlaceCount": 8,
+          "widthKm": 6.99,
+          "heightKm": 5.42,
+          "spanKm": 7.04,
+          "averageNearestKm": 1.55,
+          "components": 2,
+          "largestLegKm": 7.04,
+          "jumpRatio": 1.85
+        },
+        "days": [
+          1,
+          2,
+          3
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-07-compact-basin.webp",
+        "title": "加德满都谷地 · 旅行路线",
+        "ariaLabel": "加德满都谷地模板化旅行路线示意图，共3天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "加德满都谷地",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 1,
+            "color": "#397dc1",
+            "placeIds": [
+              "place-pashupatinath",
+              "place-boudhanath",
+              "place-swayambhunath"
+            ],
+            "paths": [
+              "M935.07 379.79 C966.7 325.7 1010.4 284.5 1063.63 258.6 C826.8 253.3 593.2 277.8 376.37 330.66"
+            ],
+            "overviewPaths": [
+              "M935.07 379.79 C966.7 325.7 1010.4 284.5 1063.63 258.6 C826.8 253.3 593.2 277.8 376.37 330.66"
+            ]
+          },
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "place-thamel"
+            ],
+            "paths": [],
+            "overviewPaths": []
+          },
+          {
+            "day": 3,
+            "color": "#618344",
+            "placeIds": [
+              "place-ktmdurbar",
+              "place-asan",
+              "place-thamel",
+              "place-patan",
+              "place-dwarikas"
+            ],
+            "paths": [
+              "M509.68 452.02 C537.1 429.6 568.4 416.4 601.73 413.22 C604.6 377.6 597.7 344.1 581.23 314.53 C654.2 468.8 698.3 630.9 710.82 791.4 C774.5 677.5 809.3 555.4 813.28 432.2"
+            ],
+            "overviewPaths": [
+              "M509.68 452.02 C537.1 429.6 568.4 416.4 601.73 413.22 C604.6 377.6 597.7 344.1 581.23 314.53 C654.2 468.8 698.3 630.9 710.82 791.4 C774.5 677.5 809.3 555.4 813.28 432.2"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "place-pashupatinath",
+            "x": 935.07,
+            "y": 379.79,
+            "color": "#397dc1",
+            "tx": 967.07,
+            "ty": 347.79,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "帕斯帕提那神庙"
+            ],
+            "query": "帕斯帕提那神庙 加德满都谷地",
+            "geo": {
+              "lat": 27.7104,
+              "lng": 85.3487
+            },
+            "days": [
+              1
+            ]
+          },
+          {
+            "id": "place-boudhanath",
+            "x": 1063.63,
+            "y": 258.6,
+            "color": "#397dc1",
+            "tx": 1031.63,
+            "ty": 226.6,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "博达哈大佛塔"
+            ],
+            "query": "博达哈大佛塔 加德满都谷地",
+            "geo": {
+              "lat": 27.7215,
+              "lng": 85.362
+            },
+            "days": [
+              1
+            ]
+          },
+          {
+            "id": "place-thamel",
+            "x": 581.23,
+            "y": 314.53,
+            "color": "#e77e22",
+            "tx": 659.23,
+            "ty": 252.53,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "泰米尔区"
+            ],
+            "query": "泰米尔区 加德满都谷地",
+            "geo": {
+              "lat": 27.7154,
+              "lng": 85.3123
+            },
+            "days": [
+              2,
+              3
+            ]
+          },
+          {
+            "id": "place-ktmdurbar",
+            "x": 509.68,
+            "y": 452.02,
+            "color": "#618344",
+            "tx": 431.68,
+            "ty": 528.02,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "加德满都杜巴广场"
+            ],
+            "query": "加德满都杜巴广场 加德满都谷地",
+            "geo": {
+              "lat": 27.7045,
+              "lng": 85.3066
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "place-swayambhunath",
+            "x": 376.37,
+            "y": 330.66,
+            "color": "#397dc1",
+            "tx": 238.37,
+            "ty": 432.66,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "猴庙"
+            ],
+            "query": "猴庙 加德满都谷地",
+            "geo": {
+              "lat": 27.7149,
+              "lng": 85.2909
+            },
+            "days": [
+              1
+            ]
+          },
+          {
+            "id": "place-asan",
+            "x": 601.73,
+            "y": 413.22,
+            "color": "#618344",
+            "tx": 739.73,
+            "ty": 515.22,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "阿山广场"
+            ],
+            "query": "阿山广场 加德满都谷地",
+            "geo": {
+              "lat": 27.7076,
+              "lng": 85.3121
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "place-dwarikas",
+            "x": 813.28,
+            "y": 432.2,
+            "color": "#618344",
+            "tx": 735.28,
+            "ty": 508.2,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Dwarika's Hotel"
+            ],
+            "query": "Dwarika's Hotel 加德满都谷地",
+            "geo": {
+              "lat": 27.7056,
+              "lng": 85.3361
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "place-patan",
+            "x": 710.82,
+            "y": 791.4,
+            "color": "#618344",
+            "tx": 678.82,
+            "ty": 759.4,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "帕坦杜巴广场"
+            ],
+            "query": "帕坦杜巴广场 加德满都谷地",
+            "geo": {
+              "lat": 27.6727,
+              "lng": 85.3255
+            },
+            "days": [
+              3
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "place-pashupatinath",
+          "place-boudhanath",
+          "place-thamel",
+          "place-ktmdurbar",
+          "place-swayambhunath",
+          "place-asan",
+          "place-dwarikas",
+          "place-patan"
+        ],
+        "dailyLayouts": {
+          "1": {
+            "places": [
+              "place-pashupatinath",
+              "place-boudhanath",
+              "place-swayambhunath"
+            ],
+            "labels": {
+              "place-pashupatinath": {
+                "x": 967.07,
+                "y": 347.79,
+                "anchor": "start"
+              },
+              "place-boudhanath": {
+                "x": 1031.63,
+                "y": 226.6,
+                "anchor": "end"
+              },
+              "place-swayambhunath": {
+                "x": 238.37,
+                "y": 432.66,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 999.35,
+                "y": 319.2
+              },
+              {
+                "items": [],
+                "x": 720,
+                "y": 294.63
+              }
+            ]
+          },
+          "2": {
+            "places": [
+              "place-thamel"
+            ],
+            "labels": {
+              "place-thamel": {
+                "x": 659.23,
+                "y": 252.53,
+                "anchor": "start"
+              }
+            },
+            "transport": []
+          },
+          "3": {
+            "places": [
+              "place-ktmdurbar",
+              "place-asan",
+              "place-thamel",
+              "place-patan",
+              "place-dwarikas"
+            ],
+            "labels": {
+              "place-ktmdurbar": {
+                "x": 431.68,
+                "y": 528.02,
+                "anchor": "end"
+              },
+              "place-asan": {
+                "x": 739.73,
+                "y": 515.22,
+                "anchor": "start"
+              },
+              "place-thamel": {
+                "x": 659.23,
+                "y": 252.53,
+                "anchor": "start"
+              },
+              "place-patan": {
+                "x": 678.82,
+                "y": 759.4,
+                "anchor": "end"
+              },
+              "place-dwarikas": {
+                "x": 735.28,
+                "y": 508.2,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 555.71,
+                "y": 432.62
+              },
+              {
+                "items": [],
+                "x": 591.48,
+                "y": 363.88
+              },
+              {
+                "items": [],
+                "x": 646.03,
+                "y": 552.96
+              },
+              {
+                "items": [],
+                "x": 762.05,
+                "y": 611.8
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "nagarkot",
+        "label": "纳加阔特",
+        "countryCode": "NP",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "upland-basin",
+        "mapModeReason": "compact-city-route",
+        "mapModeMetrics": {
+          "placeCount": 5,
+          "geoPlaceCount": 5,
+          "widthKm": 9.12,
+          "heightKm": 5.08,
+          "spanKm": 10.32,
+          "averageNearestKm": 2.93,
+          "components": 1,
+          "largestLegKm": 10.32,
+          "jumpRatio": 2.02
+        },
+        "days": [
+          1,
+          2
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-06-upland-basin.webp",
+        "title": "纳加阔特 · 旅行路线",
+        "ariaLabel": "纳加阔特模板化旅行路线示意图，共2天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "纳加阔特",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 1,
+            "color": "#397dc1",
+            "placeIds": [
+              "place-nagarkot"
+            ],
+            "paths": [],
+            "overviewPaths": []
+          },
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "place-nagarkot",
+              "place-bhaktapur",
+              "place-taumadhi",
+              "place-pottery",
+              "place-changu"
+            ],
+            "paths": [
+              "M1153.4 358.28 C921.5 432.2 702.2 533.4 508.41 655.91 C541.6 644.9 575.2 643.7 607.12 652.42 C583.5 677.2 568.4 706.4 562.84 738.3 C527.6 607.8 522.3 476.1 547.25 350.9"
+            ],
+            "overviewPaths": [
+              "M1153.4 358.28 C921.5 432.2 702.2 533.4 508.41 655.91 C541.6 644.9 575.2 643.7 607.12 652.42 C583.5 677.2 568.4 706.4 562.84 738.3 C527.6 607.8 522.3 476.1 547.25 350.9"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "place-nagarkot",
+            "x": 1153.4,
+            "y": 358.28,
+            "color": "#397dc1",
+            "tx": 1185.4,
+            "ty": 326.28,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "纳加阔特观景台"
+            ],
+            "query": "纳加阔特观景台 纳加阔特",
+            "geo": {
+              "lat": 27.7154,
+              "lng": 85.5206
+            },
+            "days": [
+              1,
+              2
+            ]
+          },
+          {
+            "id": "place-bhaktapur",
+            "x": 508.41,
+            "y": 655.91,
+            "color": "#e77e22",
+            "tx": 476.41,
+            "ty": 623.91,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "巴德岗杜巴广场"
+            ],
+            "query": "巴德岗杜巴广场 纳加阔特",
+            "geo": {
+              "lat": 27.6722,
+              "lng": 85.4278
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "place-taumadhi",
+            "x": 607.12,
+            "y": 652.42,
+            "color": "#e77e22",
+            "tx": 685.12,
+            "ty": 590.42,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "陶马迪广场"
+            ],
+            "query": "陶马迪广场 纳加阔特",
+            "geo": {
+              "lat": 27.6718,
+              "lng": 85.4297
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "place-pottery",
+            "x": 562.84,
+            "y": 738.3,
+            "color": "#e77e22",
+            "tx": 484.84,
+            "ty": 814.3,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "陶器广场"
+            ],
+            "query": "陶器广场 纳加阔特",
+            "geo": {
+              "lat": 27.6706,
+              "lng": 85.4318
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "place-changu",
+            "x": 547.25,
+            "y": 350.9,
+            "color": "#e77e22",
+            "tx": 685.25,
+            "ty": 262.9,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "昌古纳拉扬寺"
+            ],
+            "query": "昌古纳拉扬寺 纳加阔特",
+            "geo": {
+              "lat": 27.7164,
+              "lng": 85.4279
+            },
+            "days": [
+              2
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "place-nagarkot",
+          "place-bhaktapur",
+          "place-taumadhi",
+          "place-pottery",
+          "place-changu"
+        ],
+        "dailyLayouts": {
+          "1": {
+            "places": [
+              "place-nagarkot"
+            ],
+            "labels": {
+              "place-nagarkot": {
+                "x": 1185.4,
+                "y": 326.28,
+                "anchor": "start"
+              }
+            },
+            "transport": []
+          },
+          "2": {
+            "places": [
+              "place-nagarkot",
+              "place-bhaktapur",
+              "place-taumadhi",
+              "place-pottery",
+              "place-changu"
+            ],
+            "labels": {
+              "place-nagarkot": {
+                "x": 1185.4,
+                "y": 326.28,
+                "anchor": "start"
+              },
+              "place-bhaktapur": {
+                "x": 476.41,
+                "y": 623.91,
+                "anchor": "end"
+              },
+              "place-taumadhi": {
+                "x": 685.12,
+                "y": 590.42,
+                "anchor": "start"
+              },
+              "place-pottery": {
+                "x": 484.84,
+                "y": 814.3,
+                "anchor": "end"
+              },
+              "place-changu": {
+                "x": 685.25,
+                "y": 262.9,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 830.91,
+                "y": 507.09
+              },
+              {
+                "items": [],
+                "x": 557.76,
+                "y": 654.16
+              },
+              {
+                "items": [],
+                "x": 584.98,
+                "y": 695.36
+              },
+              {
+                "items": [],
+                "x": 555.05,
+                "y": 544.6
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

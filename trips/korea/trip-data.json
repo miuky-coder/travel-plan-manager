@@ -1,0 +1,1934 @@
+{
+  "$schema": "./schemas/trip-data.schema.json",
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "todo": true,
+      "driving": false,
+      "ledger": true
+    },
+    "language": "zh-CN",
+    "persistence": {
+      "mode": "local"
+    }
+  },
+  "metadata": {
+    "tripId": "kr-seoul-jeju-20261230",
+    "title": "韩国 5 日 · 首尔 + 济州（元旦跨年）",
+    "language": "zh-CN",
+    "timeZone": "Asia/Seoul",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/templates/template-06-upland-basin.webp"
+      ]
+    }
+  },
+  "trip": {
+    "status": "draft",
+    "startDate": "2026-12-30",
+    "endDate": "2027-01-03",
+    "dayCount": 5,
+    "nightCountAway": 4,
+    "countries": [
+      {
+        "code": "KR",
+        "nameZh": "韩国",
+        "name": "South Korea",
+        "nameEn": "South Korea"
+      }
+    ],
+    "primaryDestinationCountries": [
+      "KR"
+    ],
+    "primaryDestinationName": "首尔 · 济州",
+    "citiesAndAreas": [
+      "首尔",
+      "济州"
+    ],
+    "routeSummary": "首尔（明洞 · 汉南洞 · 圣水洞 · 跨年夜）→ 济州（城山日出峰 · 万丈窟 · 涯月）→ 首尔（补货 · 返程）",
+    "groupSize": null
+  },
+  "flightJourneys": [
+    {
+      "id": "journey-international-outbound",
+      "title": "上海浦东 PVG → 首尔仁川 ICN",
+      "date": "2026-12-30",
+      "status": "confirmed",
+      "note": "KE898 08:50 起飞 · 11:55 抵达（示例航班）。中韩时差 1 小时，落地当天下午即可进市区。",
+      "sampleData": true
+    },
+    {
+      "id": "journey-gmp-cju",
+      "title": "首尔金浦 GMP → 济州 CJU",
+      "date": "2027-01-01",
+      "status": "confirmed",
+      "note": "KE1201 09:00 起飞 · 10:05 抵达（示例航班）。元旦班次紧张，建议起飞前 1 个月出票。",
+      "sampleData": true
+    },
+    {
+      "id": "journey-cju-gmp",
+      "title": "济州 CJU → 首尔金浦 GMP（晚班机）",
+      "date": "2027-01-02",
+      "status": "confirmed",
+      "note": "OZ8996 19:20 起飞 · 20:25 抵达（示例航班）。1 月济州易受大风影响，晚班延误时金浦地铁末班车约 23:30，逾时改打车。",
+      "sampleData": true
+    },
+    {
+      "id": "journey-international-inbound",
+      "title": "首尔仁川 ICN → 上海浦东 PVG",
+      "date": "2027-01-03",
+      "status": "confirmed",
+      "note": "KE897 16:40 起飞 · 17:45 抵达（示例航班）。当天需预留 3–4 小时办退税与海关。",
+      "sampleData": true
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-ke898",
+      "journeyId": "journey-international-outbound",
+      "sequence": 1,
+      "airline": {
+        "name": "Korean Air",
+        "nameZh": "大韩航空"
+      },
+      "flightNumber": "KE898",
+      "carrierId": "KE",
+      "cabin": "经济舱",
+      "durationText": "2小时05分",
+      "departure": {
+        "airportCode": "PVG",
+        "airportName": "上海浦东国际机场",
+        "city": "上海",
+        "terminal": "T2",
+        "date": "2026-12-30",
+        "time": "08:50",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "ICN",
+        "airportName": "仁川国际机场",
+        "city": "首尔",
+        "terminal": "T2",
+        "date": "2026-12-30",
+        "time": "11:55",
+        "utcOffset": "+09:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    },
+    {
+      "id": "flight-ke1201",
+      "journeyId": "journey-gmp-cju",
+      "sequence": 1,
+      "airline": {
+        "name": "Korean Air",
+        "nameZh": "大韩航空"
+      },
+      "flightNumber": "KE1201",
+      "carrierId": "KE",
+      "cabin": "经济舱",
+      "durationText": "1小时05分",
+      "departure": {
+        "airportCode": "GMP",
+        "airportName": "金浦国际机场",
+        "city": "首尔",
+        "terminal": "国内线",
+        "date": "2027-01-01",
+        "time": "09:00",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "CJU",
+        "airportName": "济州国际机场",
+        "city": "济州",
+        "date": "2027-01-01",
+        "time": "10:05",
+        "utcOffset": "+09:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    },
+    {
+      "id": "flight-oz8996",
+      "journeyId": "journey-cju-gmp",
+      "sequence": 1,
+      "airline": {
+        "name": "Asiana Airlines",
+        "nameZh": "韩亚航空"
+      },
+      "flightNumber": "OZ8996",
+      "carrierId": "OZ",
+      "cabin": "经济舱",
+      "durationText": "1小时05分",
+      "departure": {
+        "airportCode": "CJU",
+        "airportName": "济州国际机场",
+        "city": "济州",
+        "date": "2027-01-02",
+        "time": "19:20",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "GMP",
+        "airportName": "金浦国际机场",
+        "city": "首尔",
+        "date": "2027-01-02",
+        "time": "20:25",
+        "utcOffset": "+09:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    },
+    {
+      "id": "flight-ke897",
+      "journeyId": "journey-international-inbound",
+      "sequence": 1,
+      "airline": {
+        "name": "Korean Air",
+        "nameZh": "大韩航空"
+      },
+      "flightNumber": "KE897",
+      "carrierId": "KE",
+      "cabin": "经济舱",
+      "durationText": "2小时05分",
+      "departure": {
+        "airportCode": "ICN",
+        "airportName": "仁川国际机场",
+        "city": "首尔",
+        "terminal": "T2",
+        "date": "2027-01-03",
+        "time": "16:40",
+        "utcOffset": "+09:00"
+      },
+      "arrival": {
+        "airportCode": "PVG",
+        "airportName": "上海浦东国际机场",
+        "city": "上海",
+        "terminal": "T2",
+        "date": "2027-01-03",
+        "time": "17:45",
+        "utcOffset": "+08:00"
+      },
+      "note": "示例航班（虚构占位）：航班号与时刻为按行程倒推的合理编排，非真实订座记录，请以实际出票信息替换。"
+    }
+  ],
+  "accommodations": [
+    {
+      "id": "stay-seoul-1",
+      "name": "首尔酒店（明洞 / 忠武路 / 乙支路一带，待确认）",
+      "cityOrArea": "首尔",
+      "checkIn": "2026-12-30",
+      "checkOut": "2027-01-01",
+      "nights": 2,
+      "status": "pending",
+      "note": "跨年夜步行回酒店、购物零通勤；品质型可参考 L'Escape、明洞新世界、Josun Palace。"
+    },
+    {
+      "id": "stay-jeju-1",
+      "name": "济州市区酒店（待确认）",
+      "cityOrArea": "济州",
+      "checkIn": "2027-01-01",
+      "checkOut": "2027-01-02",
+      "nights": 1,
+      "status": "pending",
+      "note": "选济州市区，靠近机场、东门市场与东线起点；1 月为济州房价低点。"
+    },
+    {
+      "id": "stay-seoul-2",
+      "name": "首尔酒店（明洞或江南 / 狎鸥亭，待确认）",
+      "cityOrArea": "首尔",
+      "checkIn": "2027-01-02",
+      "checkOut": "2027-01-03",
+      "nights": 1,
+      "status": "pending",
+      "note": "最后一晚可换江南 / 狎鸥亭，方便 K-Star Road 与旗舰店。"
+    }
+  ],
+  "groundTransport": {
+    "rentalCar": null,
+    "rentalChecklist": [],
+    "drivingNotes": [
+      "济州冬季山路结冰，攻略建议以打车 / 包车代替自驾；自驾需持国际驾照 IDP。"
+    ],
+    "drivingReferenceLinks": [],
+    "plannedRoadLegs": [],
+    "publicTransitAndRail": [
+      "首尔以地铁 + 步行 + 偶尔打车为主，交通卡用 T-money 或 WOWPASS。",
+      "12/31 当晚首尔地铁与市区公交延营至凌晨 2 点（一年仅此一晚）。"
+    ]
+  },
+  "days": [
+    {
+      "day": 1,
+      "id": "day-1",
+      "date": "2026-12-30",
+      "title": "抵达首尔 · 明洞开局",
+      "locations": [
+        "仁川机场",
+        "明洞",
+        "清溪川",
+        "光化门广场"
+      ],
+      "schedule": [
+        {
+          "id": "d1-1",
+          "time": "13:30",
+          "type": "flight",
+          "text": "KE898 11:55 落地仁川 T2 → 入境、取行李、买 T-money → 机场大巴或 AREX 进市区（约 60–70 分钟）",
+          "placeIds": [
+            "place-incheon"
+          ]
+        },
+        {
+          "id": "d1-2",
+          "time": "15:30",
+          "type": "check-in",
+          "text": "明洞酒店放行李",
+          "placeIds": [
+            "place-myeongdong"
+          ]
+        },
+        {
+          "id": "d1-3",
+          "time": "16:00",
+          "type": "shopping",
+          "text": "明洞 NOON SQUARE 1 楼 · Korea Grand Sale Welcome Center（11:00–20:00）领优惠券册，问清本期参与品牌，抽签活动也在这里",
+          "placeIds": [
+            "place-myeongdong"
+          ]
+        },
+        {
+          "id": "d1-4",
+          "time": "17:30",
+          "type": "shopping",
+          "text": "明洞扫货第一波：Olive Young 明洞旗舰、药店（有中文店员）、Daiso、ABC-Mart",
+          "placeIds": [
+            "place-myeongdong"
+          ]
+        },
+        {
+          "id": "d1-5",
+          "time": "19:00",
+          "type": "restaurant",
+          "text": "晚餐：明洞猪肉汤饭或一只鸡，冬天第一顿要吃热的",
+          "placeIds": [
+            "place-myeongdong"
+          ]
+        },
+        {
+          "id": "d1-6",
+          "time": "20:30",
+          "type": "attraction",
+          "text": "清溪川灯节（18:00 亮灯）→ 光化门广场灯光秀，靠夜景把时差倒过来",
+          "placeIds": [
+            "place-cheonggyecheon",
+            "place-gwanghwamun"
+          ]
+        }
+      ],
+      "notes": [
+        "结账时直接说 Tax Refund 并出示护照，当场扣税；单张小票 ₩15,000 起可退，实际到手约 5–8%（不是 10%）。"
+      ],
+      "costReferences": [
+        {
+          "item": "机场大巴 / AREX",
+          "currency": "KRW",
+          "amountOptions": [
+            "9,000–17,000"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "id": "day-2",
+      "date": "2026-12-31",
+      "title": "汉南洞 · 圣水洞 → 跨年夜",
+      "locations": [
+        "汉南洞",
+        "圣水洞",
+        "乐天世界塔"
+      ],
+      "schedule": [
+        {
+          "id": "d2-1",
+          "time": "10:30",
+          "type": "attraction",
+          "text": "汉南洞（汉江镇站）：买手店、设计家具、网红咖啡，首尔咖啡密度最高的街区之一",
+          "placeIds": [
+            "place-hannamdong"
+          ]
+        },
+        {
+          "id": "d2-2",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "午餐：汉南洞西餐厅或韩牛烤肉（人均 ₩80,000–120,000）",
+          "placeIds": [
+            "place-hannamdong"
+          ]
+        },
+        {
+          "id": "d2-3",
+          "time": "14:00",
+          "type": "attraction",
+          "text": "圣水洞（圣水站 3 号口）：KWANGYA@SEOUL（SM 官方空间，免费免预约，10:30–20:00）、Olive Young 圣水旗舰、小卡咖啡厅一条街（约 40 家轮换主题，入场 ₩5,000–8,000 含主题饮品）",
+          "placeIds": [
+            "place-seongsu"
+          ]
+        },
+        {
+          "id": "d2-4",
+          "time": "17:00",
+          "type": "rest",
+          "text": "回首尔换厚衣服，跨年夜要在户外站 2–3 小时"
+        },
+        {
+          "id": "d2-5",
+          "time": "21:00",
+          "type": "transfer",
+          "text": "出发去跨年现场（乐天世界塔 / 普信阁 / 汉江游船三选一）",
+          "placeIds": [
+            "place-lotte-tower"
+          ]
+        },
+        {
+          "id": "d2-6",
+          "time": "23:30",
+          "type": "attraction",
+          "text": "乐天世界塔（蚕室）：123 层塔身数字倒数 + LED + 烟火，World Park 与石村湖周边可看",
+          "placeIds": [
+            "place-lotte-tower"
+          ]
+        },
+        {
+          "id": "d2-7",
+          "time": "00:00",
+          "type": "note",
+          "text": "跨年。离场预留 40 分钟，鞋底厚度与暖宝宝数量决定这一晚的体验上限"
+        }
+      ],
+      "notes": [
+        "跨年三选一：① 乐天世界塔（视觉最炸，适合拍照）；② 普信阁敲钟（最传统，午夜 33 响，免费，23:00–00:20，需 22:30 前到位）；③ 汉江游船倒数 / 江南 rooftop gala（需提前数周订位）。",
+        "交通：12/31 当晚地铁与市区公交延营至凌晨 2 点；钟阁站 23:00–01:00 不停靠，去普信阁改从钟路 3 街、乙支路 1 街或市厅站步行；18:00 起钟路一带 47 条公交线路改道。"
+      ],
+      "costReferences": [
+        {
+          "item": "韩牛烤肉（人均）",
+          "currency": "KRW",
+          "amountOptions": [
+            "80,000–120,000"
+          ]
+        },
+        {
+          "item": "小卡咖啡厅入场",
+          "currency": "KRW",
+          "amountOptions": [
+            "5,000–8,000"
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "id": "day-3",
+      "date": "2027-01-01",
+      "title": "飞济州 · 东线",
+      "locations": [
+        "金浦机场",
+        "济州机场",
+        "城山日出峰",
+        "万丈窟",
+        "东门传统市场"
+      ],
+      "schedule": [
+        {
+          "id": "d3-1",
+          "time": "07:30",
+          "type": "transfer",
+          "text": "前往金浦机场（明洞打车约 30 分钟，或地铁 + 机场铁路；国内航班提前 1 小时到即可）",
+          "placeIds": [
+            "place-gimpo"
+          ]
+        },
+        {
+          "id": "d3-2",
+          "time": "09:00",
+          "type": "flight",
+          "text": "KE1201 金浦 GMP 09:00 → 济州 CJU 10:05（约 1 小时 5 分）"
+        },
+        {
+          "id": "d3-3",
+          "time": "11:00",
+          "type": "transfer",
+          "text": "济州机场取车（需国际驾照 IDP）或直接打车 / 包车；冬季山路建议不自驾",
+          "placeIds": [
+            "place-jeju-airport"
+          ]
+        },
+        {
+          "id": "d3-4",
+          "time": "12:30",
+          "type": "restaurant",
+          "text": "午餐：济州黑猪肉一条街",
+          "placeIds": [
+            "place-heukdwaeji"
+          ]
+        },
+        {
+          "id": "d3-5",
+          "time": "14:00",
+          "type": "attraction",
+          "text": "城山日出峰（UNESCO 自然遗产，约 1 小时登顶，冬天海岸线极干净）",
+          "placeIds": [
+            "place-seongsan"
+          ],
+          "ticketIds": [
+            "ticket-seongsan"
+          ]
+        },
+        {
+          "id": "d3-6",
+          "time": "16:00",
+          "type": "attraction",
+          "text": "万丈窟（熔岩洞，洞内恒温不怕冷）",
+          "placeIds": [
+            "place-manjanggul"
+          ],
+          "ticketIds": [
+            "ticket-manjanggul"
+          ]
+        },
+        {
+          "id": "d3-7",
+          "time": "18:00",
+          "type": "attraction",
+          "text": "东门传统市场：1 月正是汉拿峰（Hallabong）柑橘旺季，直接从果农手上买；夜市吃辣炒年糕、黑猪肉串",
+          "placeIds": [
+            "place-dongmun"
+          ]
+        },
+        {
+          "id": "d3-8",
+          "time": "20:00",
+          "type": "check-in",
+          "text": "济州市酒店，早睡补觉"
+        }
+      ],
+      "notes": [
+        "想登汉拿山：冬季山顶路线（城板岳 / 观音寺）需提前在 hallasan.go.kr 预约，且必须在 11:30 前通过登山口，上半段结冰需冰爪（登山口附近约 ₩5,000 可租）。1 月山上风雪大，天气不好就改去万丈窟 / 博物馆 / 咖啡馆。",
+        "1 月济州西北季风强，航班延误概率不低；因此把济州放在行程中段，1/2 晚上即回首尔，返程日不再安排国内段航班。"
+      ]
+    },
+    {
+      "day": 4,
+      "id": "day-4",
+      "date": "2027-01-02",
+      "title": "济州西南线 → 晚班机回首尔",
+      "locations": [
+        "涯月邑",
+        "O'Sulloc 绿茶博物馆",
+        "山茶花 Hill",
+        "济州市区"
+      ],
+      "schedule": [
+        {
+          "id": "d4-1",
+          "time": "09:30",
+          "type": "restaurant",
+          "text": "早餐：济州海鲜汤 / 鲍鱼粥"
+        },
+        {
+          "id": "d4-2",
+          "time": "10:30",
+          "type": "attraction",
+          "text": "涯月邑海边公路：咖啡馆一条街，面海落地窗，济州最出片的一段",
+          "placeIds": [
+            "place-aewol"
+          ]
+        },
+        {
+          "id": "d4-3",
+          "time": "12:00",
+          "type": "restaurant",
+          "text": "午餐：海边海鲜锅或海女之家（西归浦大静 / 摹瑟浦一带的海女餐馆）",
+          "placeIds": [
+            "place-aewol"
+          ]
+        },
+        {
+          "id": "d4-4",
+          "time": "14:00",
+          "type": "attraction",
+          "text": "山茶花 Hill / O'Sulloc 绿茶博物馆：1 月山茶花正当季，室内展馆也暖和",
+          "placeIds": [
+            "place-osulloc",
+            "place-camellia-hill"
+          ]
+        },
+        {
+          "id": "d4-5",
+          "time": "16:00",
+          "type": "shopping",
+          "text": "回济州市区最后采购柑橘与护肤品；济州市内已增设市内退税点，离岛前就能办退税",
+          "placeIds": [
+            "place-dongmun"
+          ]
+        },
+        {
+          "id": "d4-6a",
+          "time": "17:40",
+          "type": "transfer",
+          "text": "还车 / 打车前往济州机场（市区到机场约 20–30 分钟）",
+          "placeIds": [
+            "place-jeju-airport"
+          ]
+        },
+        {
+          "id": "d4-6",
+          "time": "19:20",
+          "type": "flight",
+          "text": "OZ8996 济州 CJU 19:20 → 金浦 GMP 20:25（冬季易延误，建议提前 1.5 小时到机场）"
+        },
+        {
+          "id": "d4-7",
+          "time": "21:30",
+          "type": "check-in",
+          "text": "首尔酒店入住（金浦到市区约 30–40 分钟）",
+          "placeIds": [
+            "place-myeongdong"
+          ]
+        }
+      ],
+      "notes": [
+        "济州沿海 3–7℃、比首尔暖但风大，海风口体感骤降，帽子围巾别收。"
+      ]
+    },
+    {
+      "day": 5,
+      "id": "day-5",
+      "date": "2027-01-03",
+      "title": "补货 + 返程",
+      "locations": [
+        "明洞",
+        "弘大",
+        "仁川机场"
+      ],
+      "schedule": [
+        {
+          "id": "d5-1",
+          "time": "09:30",
+          "type": "shopping",
+          "text": "最后补货：明洞 / 弘大 Olive Young，或乐天、新世界、新罗免税店（免税店是“含税价直接免”，和退税是两套体系，别搞混）",
+          "placeIds": [
+            "place-myeongdong",
+            "place-hongdae"
+          ]
+        },
+        {
+          "id": "d5-2",
+          "time": "11:30",
+          "type": "restaurant",
+          "text": "午餐：一顿好点的收尾——米其林指南里的韩式餐厅，或酒店附近烤肉",
+          "placeIds": [
+            "place-myeongdong"
+          ]
+        },
+        {
+          "id": "d5-3",
+          "time": "12:45",
+          "type": "transfer",
+          "text": "前往仁川机场（留足 3–4 小时：元旦旺季退税柜台排队很长）",
+          "placeIds": [
+            "place-incheon"
+          ]
+        },
+        {
+          "id": "d5-4",
+          "time": "13:30",
+          "type": "note",
+          "text": "退税自助机扫描护照 + 退税单（T1 在 D/J/L 登机口附近，T2 在 D/E 附近）；单张 ₩75,000 以下通常不用验货，高值商品走海关柜台——别托运，放手提",
+          "placeIds": [
+            "place-incheon"
+          ]
+        },
+        {
+          "id": "d5-5",
+          "time": "16:40",
+          "type": "flight",
+          "text": "KE897 仁川 ICN 16:40 → 上海浦东 PVG 17:45",
+          "placeIds": [
+            "place-incheon"
+          ]
+        }
+      ],
+      "notes": [
+        "退税必须出示实体护照，复印件和照片都不行；商品保持未拆封，海关可能抽查。",
+        "自 2026 年 1 月 1 日起，医美、皮肤科项目已取消退税资格。"
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "place-incheon",
+      "name": "仁川国际机场 ICN",
+      "cityOrArea": "仁川",
+      "navigation": {
+        "query": "Incheon International Airport Terminal 1"
+      }
+    },
+    {
+      "id": "place-gimpo",
+      "name": "金浦机场 GMP",
+      "cityOrArea": "首尔",
+      "navigation": {
+        "query": "Gimpo International Airport"
+      }
+    },
+    {
+      "id": "place-myeongdong",
+      "name": "明洞",
+      "cityOrArea": "首尔",
+      "navigation": {
+        "query": "명동 Myeongdong Seoul"
+      }
+    },
+    {
+      "id": "place-cheonggyecheon",
+      "name": "清溪川",
+      "cityOrArea": "首尔",
+      "navigation": {
+        "query": "청계천 Cheonggyecheon Stream Seoul"
+      }
+    },
+    {
+      "id": "place-gwanghwamun",
+      "name": "光化门广场",
+      "cityOrArea": "首尔",
+      "navigation": {
+        "query": "광화문광장 Gwanghwamun Square Seoul"
+      }
+    },
+    {
+      "id": "place-hannamdong",
+      "name": "汉南洞",
+      "cityOrArea": "首尔",
+      "navigation": {
+        "query": "한남동 Hannamdong Seoul"
+      }
+    },
+    {
+      "id": "place-seongsu",
+      "name": "圣水洞 KWANGYA@SEOUL",
+      "cityOrArea": "首尔",
+      "navigation": {
+        "query": "KWANGYA@SEOUL 성수동 Seongsu Seoul"
+      }
+    },
+    {
+      "id": "place-lotte-tower",
+      "name": "乐天世界塔",
+      "cityOrArea": "首尔蚕室",
+      "navigation": {
+        "query": "롯데월드타워 Lotte World Tower Seoul"
+      }
+    },
+    {
+      "id": "place-hongdae",
+      "name": "弘大",
+      "cityOrArea": "首尔",
+      "navigation": {
+        "query": "홍대 Hongdae Seoul"
+      }
+    },
+    {
+      "id": "place-jeju-airport",
+      "name": "济州国际机场 CJU",
+      "cityOrArea": "济州",
+      "navigation": {
+        "query": "Jeju International Airport"
+      }
+    },
+    {
+      "id": "place-heukdwaeji",
+      "name": "济州黑猪肉一条街",
+      "cityOrArea": "济州市",
+      "navigation": {
+        "query": "제주 흑돼지거리 Jeju Black Pork Street"
+      }
+    },
+    {
+      "id": "place-dongmun",
+      "name": "东门传统市场",
+      "cityOrArea": "济州市",
+      "navigation": {
+        "query": "동문재래시장 Dongmun Traditional Market Jeju"
+      }
+    },
+    {
+      "id": "place-seongsan",
+      "name": "城山日出峰",
+      "cityOrArea": "济州",
+      "navigation": {
+        "query": "성산일출봉 Seongsan Ilchulbong Jeju"
+      }
+    },
+    {
+      "id": "place-manjanggul",
+      "name": "万丈窟",
+      "cityOrArea": "济州",
+      "navigation": {
+        "query": "만장굴 Manjanggul Lava Tube Jeju"
+      }
+    },
+    {
+      "id": "place-aewol",
+      "name": "涯月邑海边公路",
+      "cityOrArea": "济州",
+      "navigation": {
+        "query": "애월해안도로 Aewol Coastal Road Jeju"
+      }
+    },
+    {
+      "id": "place-osulloc",
+      "name": "O'Sulloc 绿茶博物馆",
+      "cityOrArea": "济州西归浦",
+      "navigation": {
+        "query": "오설록티뮤지엄 O'Sulloc Tea Museum Jeju"
+      }
+    },
+    {
+      "id": "place-camellia-hill",
+      "name": "山茶花 Hill",
+      "cityOrArea": "济州西归浦",
+      "navigation": {
+        "query": "카멜리아힐 Camellia Hill Jeju"
+      }
+    },
+    {
+      "id": "place-pvg",
+      "name": "上海浦东国际机场 PVG",
+      "cityOrArea": "上海",
+      "navigation": {
+        "query": "Shanghai Pudong International Airport Terminal 2"
+      }
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "济州黑猪肉一条街",
+      "city": "济州市"
+    },
+    {
+      "name": "东门传统市场",
+      "city": "济州市"
+    },
+    {
+      "name": "O'Sulloc 绿茶博物馆",
+      "city": "济州西归浦"
+    },
+    {
+      "name": "明洞猪肉汤饭",
+      "city": "首尔明洞"
+    }
+  ],
+  "bookingsAndTickets": [],
+  "ticketPlanning": {
+    "statusStorage": "local",
+    "statusStorageNote": "门票状态默认只保存在当前浏览器。",
+    "items": [
+      {
+        "id": "ticket-seongsan",
+        "day": 3,
+        "dayId": "day-3",
+        "name": "城山日出峰",
+        "requirement": "needs-confirmation",
+        "guidance": [
+          "现场购票",
+          "成人 ₩5,000",
+          "登顶约 1 小时",
+          "风大，戴帽子"
+        ]
+      },
+      {
+        "id": "ticket-manjanggul",
+        "day": 3,
+        "dayId": "day-3",
+        "name": "万丈窟",
+        "requirement": "needs-confirmation",
+        "guidance": [
+          "现场购票",
+          "成人 ₩4,000",
+          "2026 年 5 月已重新开放",
+          "洞内湿滑，穿防滑鞋"
+        ]
+      }
+    ]
+  },
+  "preTrip": {
+    "packingItems": [
+      {
+        "id": "todo-1",
+        "text": "办理韩国签证：团体免签政策到 2026/12/31 到期，1 月出发建议直接办 10 年多次签",
+        "completed": false
+      },
+      {
+        "id": "todo-2",
+        "text": "预订国际段往返机票（元旦旺季，提前 2–3 个月）",
+        "completed": false
+      },
+      {
+        "id": "todo-3",
+        "text": "预订首尔 3 晚 + 济州 1 晚酒店",
+        "completed": false
+      },
+      {
+        "id": "todo-4",
+        "text": "预订首尔 ⇄ 济州机票（元旦建议提前 1 个月）",
+        "completed": false
+      },
+      {
+        "id": "todo-5",
+        "text": "购买 eSIM / 流量卡，装好 Naver Map 与 Papago",
+        "completed": false
+      },
+      {
+        "id": "todo-6",
+        "text": "准备 T-money 或 WOWPASS 交通卡",
+        "completed": false
+      },
+      {
+        "id": "todo-7",
+        "text": "确定跨年夜方案：乐天世界塔 / 普信阁敲钟 / 汉江游船，需订位的提前订",
+        "completed": false
+      },
+      {
+        "id": "todo-8",
+        "text": "HYBE 总部 pop-up 需在 Weverse 预约（如要去）",
+        "completed": false
+      },
+      {
+        "id": "todo-9",
+        "text": "汉拿山登山预约 hallasan.go.kr（如要去，需 11:30 前通过登山口）",
+        "completed": false
+      },
+      {
+        "id": "todo-10",
+        "text": "出发前再核对一次韩国法务部 / 驻华使领馆的签证公告",
+        "completed": false
+      }
+    ],
+    "preparationsExplicitlyMentioned": [
+      "签证（团体免签 12/31 到期，建议办个人多次签）",
+      "机票与住宿预订",
+      "eSIM / 流量卡",
+      "T-money 或 WOWPASS 交通卡",
+      "护照随身带（退税必须实体护照）",
+      "跨年夜方案与订位",
+      "汉拿山预约（如要去）"
+    ],
+    "missingNote": "航班号、具体酒店与预订信息尚未提供，页面对应位置显示“待补充”，可随时补齐。"
+  },
+  "mapLinks": {
+    "providedGoogleMapsLinks": [],
+    "note": "导航默认打开 Google Maps 搜索；在韩国步行导航建议改用 Naver Map 或 Kakao Map。",
+    "cityLevelNavigationDisabled": false,
+    "navigationPolicy": {
+      "noNavigationTypes": [
+        "flight",
+        "note",
+        "rest"
+      ],
+      "selfNavigationTypes": [
+        "drive",
+        "return",
+        "transfer",
+        "check-in",
+        "check-out",
+        "restaurant",
+        "attraction",
+        "walk",
+        "hike"
+      ]
+    },
+    "navigationPlaces": []
+  },
+  "issuesAndUncertainties": [
+    {
+      "id": "issue-visa",
+      "topic": "签证",
+      "summary": "中国团体游客免签政策有效期到 2026/12/31，本次 2027/1 出发可能不适用",
+      "impact": "出发前必须确认政策是否延期，或直接办理个人 / 10 年多次签"
+    },
+    {
+      "id": "issue-flights",
+      "topic": "航班",
+      "summary": "四段航班已填入示例（虚构）航班号与时刻，尚未对应真实订座记录",
+      "impact": "航班模块已可正常显示航段与倒计时；拿到真实机票后替换 flights[] 中的航班号、时刻与航站楼即可"
+    },
+    {
+      "id": "issue-hotels",
+      "topic": "住宿",
+      "summary": "首尔与济州的具体酒店、地址、入住 / 退房时间尚未确定",
+      "impact": "住宿记录暂为待确认，行程中的入住与退房已按天数写入"
+    },
+    {
+      "id": "issue-jeju-weather",
+      "topic": "天气",
+      "summary": "1 月济州西北季风强，大风雪可能导致航班延误或取消",
+      "impact": "济州安排在中段且 1/2 晚即回首尔，返程日不排国内段航班"
+    }
+  ],
+  "map": {
+    "schemaVersion": "1.0-lite",
+    "mapMode": "template-auto",
+    "templateId": "auto",
+    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "defaultRegionId": "seoul",
+    "regions": [
+      {
+        "id": "seoul",
+        "label": "首尔",
+        "countryCode": "KR"
+      },
+      {
+        "id": "jeju",
+        "label": "济州",
+        "countryCode": "KR"
+      }
+    ],
+    "places": [
+      {
+        "id": "place-incheon",
+        "name": "仁川机场",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "includeInMap": false,
+        "geo": {
+          "lat": 37.4602,
+          "lng": 126.4407
+        }
+      },
+      {
+        "id": "place-gimpo",
+        "name": "金浦机场",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "includeInMap": false,
+        "geo": {
+          "lat": 37.5583,
+          "lng": 126.7906
+        }
+      },
+      {
+        "id": "place-myeongdong",
+        "name": "明洞",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "geo": {
+          "lat": 37.5636,
+          "lng": 126.9826
+        }
+      },
+      {
+        "id": "place-cheonggyecheon",
+        "name": "清溪川",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "geo": {
+          "lat": 37.5691,
+          "lng": 126.977
+        }
+      },
+      {
+        "id": "place-gwanghwamun",
+        "name": "光化门",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "geo": {
+          "lat": 37.5759,
+          "lng": 126.9769
+        }
+      },
+      {
+        "id": "place-hannamdong",
+        "name": "汉南洞",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "geo": {
+          "lat": 37.5347,
+          "lng": 127.0014
+        }
+      },
+      {
+        "id": "place-seongsu",
+        "name": "圣水洞",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "geo": {
+          "lat": 37.543,
+          "lng": 127.0557
+        }
+      },
+      {
+        "id": "place-lotte-tower",
+        "name": "乐天世界塔",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "geo": {
+          "lat": 37.5125,
+          "lng": 127.1025
+        }
+      },
+      {
+        "id": "place-hongdae",
+        "name": "弘大",
+        "countryCode": "KR",
+        "mapRegionId": "seoul",
+        "geo": {
+          "lat": 37.5563,
+          "lng": 126.9236
+        }
+      },
+      {
+        "id": "place-jeju-airport",
+        "name": "济州机场",
+        "countryCode": "KR",
+        "mapRegionId": "jeju",
+        "includeInMap": false,
+        "geo": {
+          "lat": 33.5067,
+          "lng": 126.493
+        }
+      },
+      {
+        "id": "place-heukdwaeji",
+        "name": "黑猪肉一条街",
+        "countryCode": "KR",
+        "mapRegionId": "jeju",
+        "geo": {
+          "lat": 33.5104,
+          "lng": 126.523
+        }
+      },
+      {
+        "id": "place-dongmun",
+        "name": "东门市场",
+        "countryCode": "KR",
+        "mapRegionId": "jeju",
+        "geo": {
+          "lat": 33.5115,
+          "lng": 126.526
+        }
+      },
+      {
+        "id": "place-seongsan",
+        "name": "城山日出峰",
+        "countryCode": "KR",
+        "mapRegionId": "jeju",
+        "geo": {
+          "lat": 33.4586,
+          "lng": 126.9425
+        }
+      },
+      {
+        "id": "place-manjanggul",
+        "name": "万丈窟",
+        "countryCode": "KR",
+        "mapRegionId": "jeju",
+        "geo": {
+          "lat": 33.528,
+          "lng": 126.77
+        }
+      },
+      {
+        "id": "place-aewol",
+        "name": "涯月海边",
+        "countryCode": "KR",
+        "mapRegionId": "jeju",
+        "geo": {
+          "lat": 33.47,
+          "lng": 126.34
+        }
+      },
+      {
+        "id": "place-osulloc",
+        "name": "O'Sulloc",
+        "countryCode": "KR",
+        "mapRegionId": "jeju",
+        "geo": {
+          "lat": 33.306,
+          "lng": 126.57
+        }
+      },
+      {
+        "id": "place-camellia-hill",
+        "name": "山茶花 Hill",
+        "countryCode": "KR",
+        "mapRegionId": "jeju",
+        "geo": {
+          "lat": 33.335,
+          "lng": 126.57
+        }
+      }
+    ],
+    "routes": [
+      {
+        "day": 1,
+        "placeIds": [
+          "place-incheon",
+          "place-myeongdong",
+          "place-cheonggyecheon",
+          "place-gwanghwamun"
+        ]
+      },
+      {
+        "day": 2,
+        "placeIds": [
+          "place-hannamdong",
+          "place-seongsu",
+          "place-myeongdong",
+          "place-lotte-tower"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "place-gimpo",
+          "place-jeju-airport",
+          "place-heukdwaeji",
+          "place-seongsan",
+          "place-manjanggul",
+          "place-dongmun"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "place-aewol",
+          "place-osulloc",
+          "place-camellia-hill",
+          "place-dongmun"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "place-myeongdong",
+          "place-hongdae",
+          "place-incheon"
+        ]
+      }
+    ],
+    "dailyRoutes": []
+  },
+  "routeMap": {
+    "defaultRegionId": "seoul",
+    "regions": [
+      {
+        "id": "seoul",
+        "label": "首尔",
+        "countryCode": "KR",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "upland-basin",
+        "mapModeReason": "dense-place-cluster",
+        "mapModeMetrics": {
+          "placeCount": 7,
+          "geoPlaceCount": 7,
+          "widthKm": 15.74,
+          "heightKm": 7.04,
+          "spanKm": 16.51,
+          "averageNearestKm": 3.01,
+          "components": 1,
+          "largestLegKm": 12,
+          "jumpRatio": 2.28
+        },
+        "days": [
+          1,
+          2,
+          5
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-06-upland-basin.webp",
+        "title": "首尔 · 旅行路线",
+        "ariaLabel": "首尔模板化旅行路线示意图，共3天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "首尔",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 1,
+            "color": "#397dc1",
+            "placeIds": [
+              "place-myeongdong",
+              "place-cheonggyecheon",
+              "place-gwanghwamun"
+            ],
+            "paths": [
+              "M769.07 457.63 C734.2 453.5 703.2 440.2 678.01 418.63 C710.1 405.8 736.2 385.3 754.66 358.38"
+            ],
+            "overviewPaths": [
+              "M769.07 457.63 C734.2 453.5 703.2 440.2 678.01 418.63 C710.1 405.8 736.2 385.3 754.66 358.38"
+            ]
+          },
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "place-hannamdong",
+              "place-seongsu",
+              "place-myeongdong",
+              "place-lotte-tower"
+            ],
+            "paths": [
+              "M810.58 560.85 C876.7 567.1 939.3 555.0 994.66 525.13 C911.2 524.7 834.5 501.8 769.07 457.63 C886.0 551.6 1016.7 618.9 1153.4 655.62"
+            ],
+            "overviewPaths": [
+              "M810.58 560.85 C876.7 567.1 939.3 555.0 994.66 525.13 C911.2 524.7 834.5 501.8 769.07 457.63 C886.0 551.6 1016.7 618.9 1153.4 655.62"
+            ]
+          },
+          {
+            "day": 5,
+            "color": "#8865a5",
+            "placeIds": [
+              "place-myeongdong",
+              "place-hongdae"
+            ],
+            "paths": [
+              "M769.07 457.63 C694.5 483.5 618.9 487.1 546.6 468.23"
+            ],
+            "overviewPaths": [
+              "M769.07 457.63 C694.5 483.5 618.9 487.1 546.6 468.23"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "place-myeongdong",
+            "x": 769.07,
+            "y": 457.63,
+            "color": "#397dc1",
+            "tx": 801.07,
+            "ty": 425.63,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "明洞"
+            ],
+            "query": "明洞 首尔",
+            "geo": {
+              "lat": 37.5636,
+              "lng": 126.9826
+            },
+            "days": [
+              1,
+              2,
+              5
+            ]
+          },
+          {
+            "id": "place-cheonggyecheon",
+            "x": 678.01,
+            "y": 418.63,
+            "color": "#397dc1",
+            "tx": 646.01,
+            "ty": 386.63,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "清溪川"
+            ],
+            "query": "清溪川 首尔",
+            "geo": {
+              "lat": 37.5691,
+              "lng": 126.977
+            },
+            "days": [
+              1
+            ]
+          },
+          {
+            "id": "place-gwanghwamun",
+            "x": 754.66,
+            "y": 358.38,
+            "color": "#397dc1",
+            "tx": 832.66,
+            "ty": 296.38,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "光化门"
+            ],
+            "query": "光化门 首尔",
+            "geo": {
+              "lat": 37.5759,
+              "lng": 126.9769
+            },
+            "days": [
+              1
+            ]
+          },
+          {
+            "id": "place-hannamdong",
+            "x": 810.58,
+            "y": 560.85,
+            "color": "#e77e22",
+            "tx": 732.58,
+            "ty": 498.85,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "汉南洞"
+            ],
+            "query": "汉南洞 首尔",
+            "geo": {
+              "lat": 37.5347,
+              "lng": 127.0014
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "place-seongsu",
+            "x": 994.66,
+            "y": 525.13,
+            "color": "#e77e22",
+            "tx": 1132.66,
+            "ty": 437.13,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "圣水洞"
+            ],
+            "query": "圣水洞 首尔",
+            "geo": {
+              "lat": 37.543,
+              "lng": 127.0557
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "place-lotte-tower",
+            "x": 1153.4,
+            "y": 655.62,
+            "color": "#e77e22",
+            "tx": 1015.4,
+            "ty": 757.62,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "乐天世界塔"
+            ],
+            "query": "乐天世界塔 首尔",
+            "geo": {
+              "lat": 37.5125,
+              "lng": 127.1025
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "place-hongdae",
+            "x": 546.6,
+            "y": 468.23,
+            "color": "#8865a5",
+            "tx": 514.6,
+            "ty": 518.23,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "弘大"
+            ],
+            "query": "弘大 首尔",
+            "geo": {
+              "lat": 37.5563,
+              "lng": 126.9236
+            },
+            "days": [
+              5
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "place-myeongdong",
+          "place-cheonggyecheon",
+          "place-gwanghwamun",
+          "place-hannamdong",
+          "place-seongsu",
+          "place-lotte-tower",
+          "place-hongdae"
+        ],
+        "dailyLayouts": {
+          "1": {
+            "places": [
+              "place-myeongdong",
+              "place-cheonggyecheon",
+              "place-gwanghwamun"
+            ],
+            "labels": {
+              "place-myeongdong": {
+                "x": 801.07,
+                "y": 425.63,
+                "anchor": "start"
+              },
+              "place-cheonggyecheon": {
+                "x": 646.01,
+                "y": 386.63,
+                "anchor": "end"
+              },
+              "place-gwanghwamun": {
+                "x": 832.66,
+                "y": 296.38,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 723.54,
+                "y": 438.13
+              },
+              {
+                "items": [],
+                "x": 716.34,
+                "y": 388.5
+              }
+            ]
+          },
+          "2": {
+            "places": [
+              "place-hannamdong",
+              "place-seongsu",
+              "place-myeongdong",
+              "place-lotte-tower"
+            ],
+            "labels": {
+              "place-hannamdong": {
+                "x": 732.58,
+                "y": 498.85,
+                "anchor": "end"
+              },
+              "place-seongsu": {
+                "x": 1132.66,
+                "y": 437.13,
+                "anchor": "start"
+              },
+              "place-myeongdong": {
+                "x": 801.07,
+                "y": 425.63,
+                "anchor": "start"
+              },
+              "place-lotte-tower": {
+                "x": 1015.4,
+                "y": 757.62,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 902.62,
+                "y": 542.99
+              },
+              {
+                "items": [],
+                "x": 881.87,
+                "y": 491.38
+              },
+              {
+                "items": [],
+                "x": 961.24,
+                "y": 556.63
+              }
+            ]
+          },
+          "5": {
+            "places": [
+              "place-myeongdong",
+              "place-hongdae"
+            ],
+            "labels": {
+              "place-myeongdong": {
+                "x": 801.07,
+                "y": 425.63,
+                "anchor": "start"
+              },
+              "place-hongdae": {
+                "x": 514.6,
+                "y": 518.23,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 657.84,
+                "y": 462.93
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "jeju",
+        "label": "济州",
+        "countryCode": "KR",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "upland-basin",
+        "mapModeReason": "dense-place-cluster",
+        "mapModeMetrics": {
+          "placeCount": 7,
+          "geoPlaceCount": 7,
+          "widthKm": 55.8,
+          "heightKm": 24.64,
+          "spanKm": 55.9,
+          "averageNearestKm": 8.59,
+          "components": 1,
+          "largestLegKm": 39.33,
+          "jumpRatio": 1.73
+        },
+        "days": [
+          3,
+          4
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-06-upland-basin.webp",
+        "title": "济州 · 旅行路线",
+        "ariaLabel": "济州模板化旅行路线示意图，共2天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "济州",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 3,
+            "color": "#618344",
+            "placeIds": [
+              "place-heukdwaeji",
+              "place-seongsan",
+              "place-manjanggul",
+              "place-dongmun"
+            ],
+            "paths": [
+              "M688.12 426.07 C849.1 411.1 1007.3 425.9 1153.4 469.79 C1102.7 423.9 1043.6 395.5 979.67 386.02 C910.8 406.7 841.8 407.1 776.71 387.14"
+            ],
+            "overviewPaths": [
+              "M688.12 426.07 C849.1 411.1 1007.3 425.9 1153.4 469.79 C1102.7 423.9 1043.6 395.5 979.67 386.02 C910.8 406.7 841.8 407.1 776.71 387.14"
+            ]
+          },
+          {
+            "day": 4,
+            "color": "#209aaa",
+            "placeIds": [
+              "place-aewol",
+              "place-osulloc",
+              "place-camellia-hill",
+              "place-dongmun"
+            ],
+            "paths": [
+              "M546.6 456.03 C604.2 555.4 683.0 633.5 778.24 685.7 C768.4 652.2 768.4 618.8 778.24 587.25 C797.7 519.1 797.2 451.0 776.71 387.14"
+            ],
+            "overviewPaths": [
+              "M546.6 456.03 C604.2 555.4 683.0 633.5 778.24 685.7 C768.4 652.2 768.4 618.8 778.24 587.25 C797.7 519.1 797.2 451.0 776.71 387.14"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "place-heukdwaeji",
+            "x": 688.12,
+            "y": 426.07,
+            "color": "#618344",
+            "tx": 720.12,
+            "ty": 476.07,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "黑猪肉一条街"
+            ],
+            "query": "黑猪肉一条街 济州",
+            "geo": {
+              "lat": 33.5104,
+              "lng": 126.523
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "place-dongmun",
+            "x": 776.71,
+            "y": 387.14,
+            "color": "#618344",
+            "tx": 744.71,
+            "ty": 355.14,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "东门市场"
+            ],
+            "query": "东门市场 济州",
+            "geo": {
+              "lat": 33.5115,
+              "lng": 126.526
+            },
+            "days": [
+              3,
+              4
+            ]
+          },
+          {
+            "id": "place-seongsan",
+            "x": 1153.4,
+            "y": 469.79,
+            "color": "#618344",
+            "tx": 1231.4,
+            "ty": 407.79,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "城山日出峰"
+            ],
+            "query": "城山日出峰 济州",
+            "geo": {
+              "lat": 33.4586,
+              "lng": 126.9425
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "place-manjanggul",
+            "x": 979.67,
+            "y": 386.02,
+            "color": "#618344",
+            "tx": 901.67,
+            "ty": 324.02,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "万丈窟"
+            ],
+            "query": "万丈窟 济州",
+            "geo": {
+              "lat": 33.528,
+              "lng": 126.77
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "place-aewol",
+            "x": 546.6,
+            "y": 456.03,
+            "color": "#209aaa",
+            "tx": 408.6,
+            "ty": 558.03,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "涯月海边"
+            ],
+            "query": "涯月海边 济州",
+            "geo": {
+              "lat": 33.47,
+              "lng": 126.34
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "place-osulloc",
+            "x": 778.24,
+            "y": 685.7,
+            "color": "#209aaa",
+            "tx": 916.24,
+            "ty": 787.7,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "O'Sulloc"
+            ],
+            "query": "O'Sulloc 济州",
+            "geo": {
+              "lat": 33.306,
+              "lng": 126.57
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "place-camellia-hill",
+            "x": 778.24,
+            "y": 587.25,
+            "color": "#209aaa",
+            "tx": 810.24,
+            "ty": 555.25,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "山茶花 Hill"
+            ],
+            "query": "山茶花 Hill 济州",
+            "geo": {
+              "lat": 33.335,
+              "lng": 126.57
+            },
+            "days": [
+              4
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "place-heukdwaeji",
+          "place-dongmun",
+          "place-seongsan",
+          "place-manjanggul",
+          "place-aewol",
+          "place-osulloc",
+          "place-camellia-hill"
+        ],
+        "dailyLayouts": {
+          "3": {
+            "places": [
+              "place-heukdwaeji",
+              "place-seongsan",
+              "place-manjanggul",
+              "place-dongmun"
+            ],
+            "labels": {
+              "place-heukdwaeji": {
+                "x": 720.12,
+                "y": 476.07,
+                "anchor": "start"
+              },
+              "place-seongsan": {
+                "x": 1231.4,
+                "y": 407.79,
+                "anchor": "start"
+              },
+              "place-manjanggul": {
+                "x": 901.67,
+                "y": 324.02,
+                "anchor": "end"
+              },
+              "place-dongmun": {
+                "x": 744.71,
+                "y": 355.14,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 920.76,
+                "y": 447.93
+              },
+              {
+                "items": [],
+                "x": 1066.54,
+                "y": 427.9
+              },
+              {
+                "items": [],
+                "x": 878.19,
+                "y": 386.58
+              }
+            ]
+          },
+          "4": {
+            "places": [
+              "place-aewol",
+              "place-osulloc",
+              "place-camellia-hill",
+              "place-dongmun"
+            ],
+            "labels": {
+              "place-aewol": {
+                "x": 408.6,
+                "y": 558.03,
+                "anchor": "end"
+              },
+              "place-osulloc": {
+                "x": 916.24,
+                "y": 787.7,
+                "anchor": "start"
+              },
+              "place-camellia-hill": {
+                "x": 810.24,
+                "y": 555.25,
+                "anchor": "start"
+              },
+              "place-dongmun": {
+                "x": 744.71,
+                "y": 355.14,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 662.42,
+                "y": 570.87
+              },
+              {
+                "items": [],
+                "x": 778.24,
+                "y": 636.48
+              },
+              {
+                "items": [],
+                "x": 777.48,
+                "y": 487.19
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
